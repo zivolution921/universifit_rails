@@ -1,0 +1,17 @@
+ <%= render '/layouts/form_errors', object: @profile %>
+  <%= form_for @profile do |f| %>
+ <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label "home gym" %><br />
+    <%= f.collection_select :location_id, Location.all, :id, :name, include_blank: "please select a gym or enter a custom one below" %> OR<br />
+    Custom home gym: <br>
+    <%= f.text_field :custom_location %>
+  </div>
+
+  <%= f.submit %>
+
+<% end %>

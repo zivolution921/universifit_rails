@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  name: MyString
+  location: one
+  custom_location: MyString
+  born_on: 2017-01-11
+  zip_code: MyString
+
+two:
+  user: two
+  name: MyString
+  location: two
+  custom_location: MyString
+  born_on: 2017-01-11
+  zip_code: MyString
