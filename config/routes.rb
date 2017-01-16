@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :event_registrations
+  resources :registrations
   devise_for :admin, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users, controllers: { registrations: 'registrations' }
