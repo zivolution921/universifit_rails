@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170114172622) do
+ActiveRecord::Schema.define(version: 20170115061458) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,10 +62,22 @@ ActiveRecord::Schema.define(version: 20170114172622) do
     t.string   "name"
     t.string   "location"
     t.decimal  "price"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.datetime "starts_at"
     t.text     "description"
+    t.string   "image_file_name", default: ""
+    t.integer  "capacity",        default: 1
+  end
+
+  create_table "exercises", force: :cascade do |t|
+    t.integer  "duration_in_min"
+    t.text     "workout"
+    t.date     "workout_date"
+    t.integer  "user_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["user_id"], name: "index_exercises_on_user_id", using: :btree
   end
 
   create_table "friendships", force: :cascade do |t|
@@ -121,6 +133,7 @@ ActiveRecord::Schema.define(version: 20170114172622) do
 
   add_foreign_key "availabilities", "locations"
   add_foreign_key "availabilities", "users"
+  add_foreign_key "exercises", "users"
   add_foreign_key "profiles", "locations"
   add_foreign_key "profiles", "users"
 end
