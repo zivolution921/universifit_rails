@@ -27,8 +27,7 @@
   <%= link_to "Who's Registered?", event_event_registrations_path(@event) %>
   
   <footer>
-    <%= link_to "Register!",  new_event_event_registration_path(@event), 
-      class: "button ok register" %>
+    <%= register_link_for(@event) %>
     <nav>
       <%= link_to 'Edit', edit_event_path(@event), class: 'button' %>
       <%= link_to 'Delete', @event, 

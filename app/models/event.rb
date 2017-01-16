@@ -23,4 +23,12 @@ class Event < ApplicationRecord
     price.blank? || price.zero?
   end
 
+  def spots_left
+    capacity - event_registrations.size
+  end
+
+  def sold_out?
+    spots_left.zero?
+  end
+
 end
