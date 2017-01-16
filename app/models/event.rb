@@ -13,6 +13,8 @@ class Event < ApplicationRecord
     message: "must reference a GIF, JPG, or PNG image"
   }
 
+  has_many :event_registrations, dependent: :destroy
+
   def self.upcoming
     where('starts_at >= ?', Time.now).order(:starts_at)
   end
