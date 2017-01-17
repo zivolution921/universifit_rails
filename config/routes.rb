@@ -6,12 +6,17 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'registrations' }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
  
-  resources :profiles
+  resources :profiles do 
+    resources :exercises # Exercises url
+  end
 
   authenticated :user do
     root 'dashboard#index', as: :dashboard # dashboard_url
-    resources :exercises # Exercises url
   end
+
+  
+
+  
 
   root to: 'homepage#index' # root_url/path
 

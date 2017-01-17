@@ -84,10 +84,10 @@ ActiveRecord::Schema.define(version: 20170116175826) do
     t.integer  "duration_in_min"
     t.text     "workout"
     t.date     "workout_date"
-    t.integer  "user_id"
+    t.integer  "profile_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.index ["user_id"], name: "index_exercises_on_user_id", using: :btree
+    t.index ["profile_id"], name: "index_exercises_on_profile_id", using: :btree
   end
 
   create_table "friendships", force: :cascade do |t|
@@ -144,7 +144,7 @@ ActiveRecord::Schema.define(version: 20170116175826) do
   add_foreign_key "availabilities", "locations"
   add_foreign_key "availabilities", "users"
   add_foreign_key "event_registrations", "events"
-  add_foreign_key "exercises", "users"
+  add_foreign_key "exercises", "profiles"
   add_foreign_key "profiles", "locations"
   add_foreign_key "profiles", "users"
 end
