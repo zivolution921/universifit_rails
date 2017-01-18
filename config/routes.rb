@@ -8,7 +8,11 @@ Rails.application.routes.draw do
  
   resources :profiles do 
     resources :exercises # Exercises url
+    
   end
+  resources :events do 
+      resources :event_registrations
+    end
 
   authenticated :user do
     root 'dashboard#index', as: :dashboard # dashboard_url
@@ -20,8 +24,6 @@ Rails.application.routes.draw do
 
   root to: 'homepage#index' # root_url/path
 
-  resources :events do 
-    resources :event_registrations
-  end
+ 
 
 end

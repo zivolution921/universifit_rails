@@ -14,6 +14,7 @@ class Event < ApplicationRecord
   }
 
   has_many :event_registrations, dependent: :destroy
+  belongs_to :profile
 
   def self.upcoming
     where('starts_at >= ?', Time.now).order(:starts_at)

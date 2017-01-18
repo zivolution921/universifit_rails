@@ -1,6 +1,6 @@
 <div class='row'>
   <div class='col-md-12'>
-    <%= form_for([current_user, @exercise], :html => {class: "form-horizontal", role: "form"}) do |f|%>
+    <%= form_for([current_user.profile, @exercise], :html => {class: "form-horizontal", role: "form"}) do |f|%>
     <% if @exercise.errors.any? %>
       <div id="error_explanation">
         <h2>
@@ -38,7 +38,7 @@
           <%= f.label :workout_date, "Activity date" %>
         </div>
         <div class="col-md-10">
-          <%= f.text_field :workout_date, class: "form-control" %>
+          <%= f.text_field :workout_date, class: "form-control", placeholder: "YYYY-MM-DD" %>
         </div>
       </div>
 

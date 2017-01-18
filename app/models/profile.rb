@@ -2,6 +2,7 @@ class Profile < ApplicationRecord
   belongs_to :user
   belongs_to :location
   has_many :exercises
+  has_many :events
 
   validates :location_id, presence: true, if: :has_no_custom_location?
   validates :custom_location, presence: true, if: :has_no_location_id?

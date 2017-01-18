@@ -1,4 +1,5 @@
 class ExercisesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_exercise, except: [:index, :new, :create]
 
   def index
@@ -6,14 +7,14 @@ class ExercisesController < ApplicationController
   end
 
   def new
-    @exercises = current_user.exercises.new
+    @exercise = current_user.profile.exercises.new
   end
 
   def create
-    @exercise = current_user.exercises.new(exercise_params)
+    @exercise = current_user.profile.exercises.new(exercise_params)
     if @exercise.save
       flash[:success] = "Exercise has been created"
-      redirect_to [current_user, @exercise]
+      redirect_to [current_user.profile, @exercise]
     else
       flash[:danger] = "Exercise has not been created"
       render :new
@@ -31,7 +32,7 @@ class ExercisesController < ApplicationController
   end
 
   def set_exercise
-    @exercise = current_user.exercises.find(params[:id])
+    @exercise = current_user.profile.exercises.find(params[:id])
   end
 
 end
