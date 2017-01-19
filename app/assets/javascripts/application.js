@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui/widgets/datepicker
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
