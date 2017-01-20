@@ -13,7 +13,7 @@ class User < ApplicationRecord
 
   has_one :profile
 
-  has_many :exercises
+  # has_many :exercises
 
   def password_changed?
     self.password.present?

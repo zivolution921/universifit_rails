@@ -1,0 +1,6 @@
+<h1 class="text-center">Editing Exercise for <%= current_user.profile.name %></h1>
+
+<%= render 'form' %>
+
+<%= link_to "Show", [current_user.profile, @exercise] %>
+<%= link_to "Back", profile_exercises_path(current_user.profile), class: "btn btn-primary link", id: "new-exer-btn" %>

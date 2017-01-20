@@ -5,8 +5,6 @@ class CreateExercises < ActiveRecord::Migration[5.0]
       t.text :workout
       t.date :workout_date
       t.references :profile, foreign_key: true
-
-      t.timestamps
     end
   end
 end
