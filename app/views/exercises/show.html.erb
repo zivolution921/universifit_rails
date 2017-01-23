@@ -33,3 +33,8 @@
   <%= link_to "Back", profile_exercises_path(current_user.profile) %>
   </div>
 </div>
+
+
+
+          <%= link_to "Edit", [:edit, current_user.profile, @exercise] %>
+          <%= link_to "Destroy", [current_user.profile, @exercise], method: :delete, data: { confirm: "Are you sure?" } %> 

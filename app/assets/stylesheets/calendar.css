@@ -1,0 +1,22 @@
+
+.day .number {
+  font-size: small;
+  border: 1px solid #ddd;
+}
+
+.day {
+    width: 30px;
+    height: 30px;
+    background-color: #eee;
+    display: table-cell;
+}
+
+.day.other-month {
+  color: #ddd;
+  background-color: #fff;
+}
+
+.day.has-event {
+  color: #fff;
+  background-color: blue
+}

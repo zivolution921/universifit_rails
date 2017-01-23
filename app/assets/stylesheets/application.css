@@ -20,3 +20,8 @@
  *= require buttons
  *= require forms
  */
+
+a.btn, a.btn:link, a.btn:visited {
+    color: #fff;
+    text-decoration: none;
+}

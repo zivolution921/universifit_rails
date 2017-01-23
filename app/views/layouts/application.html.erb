@@ -81,20 +81,19 @@
         </div>
       </div>
     </div>
-
+   <%= bootstrap_flash %>
+    <section id="content">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12">
-          <%= bootstrap_flash %>
-          <%= render "layouts/sidebar" %>
-          <section id="content">
-            <%= yield %>
-          </section>
-        </div>
-      </div><!--/row-->
+      <%= yield %>
+      </div>
+    </div>
+          </section>     
+          
+          
+
       <%= render 'layouts/footer' %>
 
-    </div> <!-- /container -->
 
   </body>
 </html>

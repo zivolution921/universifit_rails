@@ -1,0 +1,33 @@
+.sidebar {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+ul.sidebar-items {
+  background-color: #ebebeb;
+  list-style: none;
+  padding-left: 0px !important;
+}
+ul.sidebar-items li {
+  border-bottom: 1px solid #D9D9D9;
+  padding: 21px 20px 17px;
+}
+
+ul.sidebar-items li .indicator {
+  background-color: #006ef9;
+    color: #fff;
+    position: relative;
+    top: -4px;
+    padding: 3px 6px;
+    text-align: center;
+    
+    transition: all 0.3s ease 0s;
+
+}
+
+.sidebar .display-name {
+    background-color: white;
+    /* text-shadow: 0 0 black; */
+    padding: 8px;
+    text-align: center;
+}
