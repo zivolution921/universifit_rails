@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :likes
   # resources :registrations
   devise_for :admin, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

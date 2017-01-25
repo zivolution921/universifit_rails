@@ -5,8 +5,13 @@
 <ol id="registrations">
   <% @event_registrations.each do |re| %>
     <li>
-      <%= mail_to(re.email, re.name) %>
-      (<%=re.how_heard %>)
+      <%= link_to re.profile.name, re.profile %>
+      <span class="date">
+        <%= time_ago_in_words(re.created_at) %> ago
+      </span>
+      <span class="how-heard">
+         (<%= re.how_heard %>) 
+      </span>
     </li>
   <% end %>
 </ol>

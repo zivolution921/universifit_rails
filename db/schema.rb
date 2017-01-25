@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170125154333) do
+ActiveRecord::Schema.define(version: 20170125203120) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -97,6 +97,15 @@ ActiveRecord::Schema.define(version: 20170125154333) do
     t.index ["user2_id", "user1_id"], name: "index_friendships_on_user2_id_and_user1_id", unique: true, using: :btree
   end
 
+  create_table "likes", force: :cascade do |t|
+    t.integer  "event_id"
+    t.integer  "profile_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_likes_on_event_id", using: :btree
+    t.index ["profile_id"], name: "index_likes_on_profile_id", using: :btree
+  end
+
   create_table "locations", force: :cascade do |t|
     t.string   "name"
     t.string   "location_type"
@@ -143,6 +152,8 @@ ActiveRecord::Schema.define(version: 20170125154333) do
   add_foreign_key "availabilities", "users"
   add_foreign_key "event_registrations", "events"
   add_foreign_key "exercises", "profiles"
+  add_foreign_key "likes", "events"
+  add_foreign_key "likes", "profiles"
   add_foreign_key "profiles", "locations"
   add_foreign_key "profiles", "users"
 end

@@ -27,6 +27,7 @@ class ProfilesController < ApplicationController
 
   def show
     profile
+    @event_registrations = profile.event_registrations
   end
 
   private
