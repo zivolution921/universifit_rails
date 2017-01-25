@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  resources :likes
+ 
   # resources :registrations
   devise_for :admin, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   end
   resources :events do 
       resources :event_registrations
+      resources :likes
     end
 
   authenticated :user do
