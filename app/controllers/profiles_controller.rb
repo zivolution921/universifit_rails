@@ -28,6 +28,7 @@ class ProfilesController < ApplicationController
   def show
     profile
     @event_registrations = profile.event_registrations
+    @liked_events = @user.liked_events
   end
 
   private
