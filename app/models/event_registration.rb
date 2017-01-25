@@ -1,8 +1,5 @@
 class EventRegistration < ApplicationRecord
   
-  validates :name, presence: true
-  
-  validates :email, format: { with: /(\S+)@(\S+)/ }
   
   HOW_HEARD_OPTIONS = [ 
     'Newsletter',
@@ -17,4 +14,5 @@ class EventRegistration < ApplicationRecord
             inclusion: { in: HOW_HEARD_OPTIONS }
 
   belongs_to :event
+  belongs_to :profile
 end
