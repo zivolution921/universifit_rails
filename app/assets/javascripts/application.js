@@ -16,4 +16,11 @@
 //= require twitter/bootstrap
 //= require raphael.min
 //= require morris
+//= require datetimepicker
 //= require_tree .
+
+$(document).ready(function() {
+  $('.datetimepicker').datetimepicker({
+    inline: true
+  })
+})

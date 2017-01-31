@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  $('#exercise_workout_date').datepicker({ dateFormat: 'yy-mm-dd' });
-
+  
+  if($('#chart').length === 0) return
   new Morris.Line({
   // ID of the element in which to draw the chart.
   element: 'chart',

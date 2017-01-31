@@ -19,9 +19,11 @@
  *= require events
  *= require buttons
  *= require forms
+ *= require datetimepicker
  */
 
 a.btn, a.btn:link, a.btn:visited {
     color: #fff;
     text-decoration: none;
 }
+

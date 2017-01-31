@@ -3,15 +3,22 @@ class ExercisesController < ApplicationController
   before_action :set_exercise, except: [:index, :new, :create]
 
   def index
-    @exercises = current_user.profile.exercises.all 
+    @exercises = current_user.profile.exercises.last_seven_days
   end
 
   def new
-    @exercise = current_user.profile.exercises.new
+
+    @exercise = current_user.profile.exercises.build(starts_at: exercise_params[:starts_at])
   end
 
   def create
-    @exercise = current_user.profile.exercises.new(exercise_params)
+    @exercise = current_user.profile.exercises.build(exercise_params)
+
+    # build does the following for me:
+    #
+    # @exercise =Exercise.new(exercise_params)
+    # @exercise.profile_id = current_user.profile_id
+
     if @exercise.save
       flash[:success] = "Exercise has been created"
       redirect_to [current_user.profile, @exercise]
@@ -48,11 +55,11 @@ class ExercisesController < ApplicationController
   private
 
   def exercise_params
-    params.require(:exercise).permit(:duration_in_min, :workout, :workout_date, :profile_id)
+    params.require(:exercise).permit(:duration_in_min, :workout, :starts_at, :location, :dedicated_to)
   end
 
   def set_exercise
-    @exercise = current_user.profile.exercises.find(params[:id])
+    @exercise = current_user.profile.exercises.unscope(:where).find(params[:id])
   end
 
 end

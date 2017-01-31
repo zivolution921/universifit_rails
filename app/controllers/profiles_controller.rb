@@ -34,7 +34,7 @@ class ProfilesController < ApplicationController
   private
 
   def profile
-    @profile ||= Profile.find(params[:id])
+    @profile ||= current_user.profile
   end
 
   def profile_params

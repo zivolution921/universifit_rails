@@ -44,7 +44,7 @@
 
     <div class="col-lg-6 col-md-6 col-sm-8" style="background-color: #fff;">
       <h1>My Dashboard</h1>
-      <%= display_calendar(Date.today, current_user.profile.events) %>
+      <%= render partial: '/shared/calendar', object: (Date.today.beginning_of_month.beginning_of_week(:sunday)..Date.today.end_of_month.end_of_week(:sunday)).to_a %>
     </div>
 
     <div class="col-lg-3 col-md-3 col-sm-2" style="background-color: #eee;">

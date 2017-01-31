@@ -1,12 +1,12 @@
-<% if params[:controller] == 'profiles' && params[:action] == 'show' %>
+<% if params[:controller] == 'dashboard' && params[:action] == 'index' %>
 <aside id="sidebar">
   <nav>
     <ul>  
-      <li>
-        <%= link_to "All Events", events_path %>
+      <li class="events">
+        <%= link_to "All Events", events_path, class: 'button' %>
       </li>
-      <li>
-        <%= link_to 'Add New Event', new_event_path %>
+      <li class="create-event">
+        <%= link_to 'Add New Event', new_event_path, class: 'button' %>
       </li>
     </ul>
   </nav>

@@ -1,0 +1,21 @@
+<div class="xdsoft_datetimepicker xdsoft_active  xdsoft_inline">
+
+<div class="xdsoft_calendar">
+
+  <table>
+    <thead>
+      <tr>
+      <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
+    </thead>
+    <tbody>
+    <%- calendar.in_groups_of(7).each do |week| %>
+      <tr>
+      <%- week.each do |day| %>
+  <td data-date="<%= day.day %>" data-month="<%= day.month %>" data-year="<%= day.year %>" class="xdsoft_date"><div><%= link_to day.day, new_profile_exercise_path(current_user.profile.id, exercise: { starts_at: day }) %></div></td>
+<% end %>
+    </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+</div>
