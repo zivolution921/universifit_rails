@@ -1,25 +1,17 @@
 class ExercisesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_exercise, except: [:index, :new, :create]
-
+ 
   def index
-    @exercises = current_user.profile.exercises.last_seven_days
+    @date = starts_at[:starts_at]
+    @exercise = current_user.profile.exercises.build(starts_at)
+    @exercises = current_user.profile.exercises.where(starts_at: starts_at[:starts_at].beginning_of_day..starts_at[:starts_at].end_of_day)
   end
 
-  def new
-
-    @exercise = current_user.profile.exercises.build(starts_at: exercise_params[:starts_at])
-  end
 
   def create
     @exercise = current_user.profile.exercises.build(exercise_params)
 
-    # build does the following for me:
-    #
-    # @exercise =Exercise.new(exercise_params)
-    # @exercise.profile_id = current_user.profile_id
-
-    if @exercise.save
+    if exercise.save
       flash[:success] = "Exercise has been created"
       redirect_to [current_user.profile, @exercise]
     else
@@ -33,9 +25,9 @@ class ExercisesController < ApplicationController
   end
 
   def update
-    if @exercise.update(exercise_params)
+    if exercise.update(exercise_params)
       flash[:success] = "Exercise has been updated"
-      redirect_to [current_user.profile, @exercise]
+      redirect_to [current_user.profile, exercise]
     else
       flash[:danger] = "Exercise has not been updated"
       render :edit
@@ -43,23 +35,31 @@ class ExercisesController < ApplicationController
   end
 
   def show
-
+    exercise
   end
 
   def destroy
-    @exercise.destroy
+    exercise.destroy
     flash[:success] = "Exercise has been deleted"
     redirect_to profile_exercises_path(current_user)
   end
 
   private
 
+  def starts_at
+    @starts_at ||= if params[:exercise]
+      { starts_at: Date.parse(params[:exercise][:starts_at]) }
+    else
+      { starts_at: Date.today }
+    end
+  end
+
   def exercise_params
     params.require(:exercise).permit(:duration_in_min, :workout, :starts_at, :location, :dedicated_to)
   end
 
-  def set_exercise
-    @exercise = current_user.profile.exercises.unscope(:where).find(params[:id])
+  def exercise
+    @exercise ||= current_user.profile.exercises.unscope(:where).find(params[:id])
   end
 
 end

@@ -1,7 +1,24 @@
 <div class="xdsoft_datetimepicker xdsoft_active  xdsoft_inline">
 
 <div class="xdsoft_calendar">
-
+<div id="calendarNaviation">
+  <div class="xdsoft_mounthpicker">
+  <button type="button" class="xdsoft_prev" style="visibility: visible;"></button>
+  <button type="button" class="xdsoft_today_button" style="visibility: visible;"></button>
+  <div class="xdsoft_label xdsoft_month">
+    <select class="xdsoft_picker_month">
+      <option value="1">January</option>
+      <option value="2">Febuary</option>
+      <option value="3">March</option>
+    </select>
+  </div>
+  <div class="xdsoft_label xdsoft_year">
+  2017
+  </div>
+  <button type="button" class="xdsoft_next" style="visibility: visible;"></button>
+</div>
+      
+</div>
   <table>
     <thead>
       <tr>
@@ -11,7 +28,7 @@
     <%- calendar.in_groups_of(7).each do |week| %>
       <tr>
       <%- week.each do |day| %>
-  <td data-date="<%= day.day %>" data-month="<%= day.month %>" data-year="<%= day.year %>" class="xdsoft_date"><div><%= link_to day.day, new_profile_exercise_path(current_user.profile.id, exercise: { starts_at: day }) %></div></td>
+  <td data-date="<%= day.day %>" data-month="<%= day.month %>" data-year="<%= day.year %>" class="xdsoft_date"><div><%= link_to day.day, profile_exercises_path(current_user.profile.id, exercise: { starts_at: day }) %></div></td>
 <% end %>
     </tr>
     <% end %>

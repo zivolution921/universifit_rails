@@ -26,15 +26,14 @@ class ProfilesController < ApplicationController
   end
 
   def show
-    profile
     @event_registrations = profile.event_registrations
-    @liked_events = @user.liked_events
+    @liked_events = profile.liked_events
   end
 
   private
 
   def profile
-    @profile ||= current_user.profile
+    @profile ||= Profile.find(params[:id])
   end
 
   def profile_params
