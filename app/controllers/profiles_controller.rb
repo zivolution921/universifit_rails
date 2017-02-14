@@ -4,7 +4,7 @@ class ProfilesController < ApplicationController
   end
 
   def edit
-    profile
+    @profile ||= current_user.profile
   end
 
   def create

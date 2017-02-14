@@ -3,19 +3,19 @@
 <div class="xdsoft_calendar">
 <div id="calendarNaviation">
   <div class="xdsoft_mounthpicker">
-  <button type="button" class="xdsoft_prev" style="visibility: visible;"></button>
+  <!--<button type="button" class="xdsoft_prev" style="visibility: visible;"></button>-->
   <button type="button" class="xdsoft_today_button" style="visibility: visible;"></button>
   <div class="xdsoft_label xdsoft_month">
     <select class="xdsoft_picker_month">
-      <option value="1">January</option>
-      <option value="2">Febuary</option>
-      <option value="3">March</option>
+      <%= %i(january febuary march april may june july august september october november december).each_with_index do |month, i| %>
+      <option value="<%= i+1 %>"><%= month.capitalize %></option>
+      <% end %>
     </select>
   </div>
   <div class="xdsoft_label xdsoft_year">
   2017
   </div>
-  <button type="button" class="xdsoft_next" style="visibility: visible;"></button>
+  <!--<button type="button" class="xdsoft_next" style="visibility: visible;"></button>-->
 </div>
       
 </div>

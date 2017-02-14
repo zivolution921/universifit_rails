@@ -16,6 +16,8 @@ Rails.application.routes.draw do
       resources :likes
     end
 
+  resources :following, only: [:create]
+
   authenticated :user do
     root 'dashboard#index', as: :dashboard # dashboard_url
   end

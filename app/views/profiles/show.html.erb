@@ -1,3 +1,14 @@
+<div><a id="follow_user_btn" data-profile-id="<%=params[:id]%>">Follow</a></div>
+
+<% if current_user.following?(params[:id])) %>
+YOU ARE FOLLOWING!
+<% else %>
+<%= form_tag "/following" do |f| %>
+  <input type=hidden id="following_user_id" name="following_user_id" value="<%= current_user.id %>" />
+  <input type=hidden id="followed_profile_id" name="followed_profile_id" value="<%= params[:id] %>" />
+  <input type=submit value="Follow me" />
+<%- end %>
+<% end %>
 <div>
 <%= @profile.name %>
 </div>

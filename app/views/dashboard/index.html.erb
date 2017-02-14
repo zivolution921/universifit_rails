@@ -1,64 +1,68 @@
 
-<div class="container">
-  <div class="row">
-    <div class="sidebar col-lg-3 col-md-3 col-sm-2" style="background-color: #eee;">
-      <div class="avatar">
-        <img src="/assets/default_avatar.png" class="img-responsive" />
-        <%#= current_user.profile.avatar %>
-      </div>
-      <div class="display-name">
-      <%= current_user.profile.name %>
-      </div>
+  <div class="container">
+    <div class="row">
+      <div class="sidebar col-lg-3 col-md-3 col-sm-2" style="background-color: #eee;">
+        <div class="avatar">
+          <img src="/assets/default_avatar.png" class="img-responsive" />
+          <%#= current_user.profile.avatar %>
+        </div>
+        <div class="display-name">
+        <%= current_user.profile.name %>
+        </div>
 
+        
+        <ul class="sidebar-items">
+          <li>
+          <span class="icon"><span class="i-comment fs20" /></span>
+          <span class="link">MESSAGES</span>
+          <span class="indicator pull-right">8</span>
+          </li>
+          <li>
+          <span class="icon"></span>
+          <span class="link">CHALLENGES</span>
+          <span class="indicator  pull-right">1</span>
+          </li>
+           <li>
+          <span class="icon"></span>
+          <span class="link"><%= link_to 'EVENTS', events_path %></span>
+          <span class="indicator  pull-right">1</span>
+          </li>
+           <li>
+          <span class="icon"></span>
+          <span class="link">ACTIVITIES</span>
+          <span class="indicator  pull-right">1</span>
+          </li>
+           <li>
+          <span class="icon"></span>
+          <span class="link">FRIENDS</span>
+          <span class="indicator  pull-right">1</span>
+          </li>
+        </ul>
+
+      </div>
       
-      <ul class="sidebar-items">
-        <li>
-        <span class="icon"><span class="i-comment fs20" /></span>
-        <span class="link">MESSAGES</span>
-        <span class="indicator pull-right">8</span>
-        </li>
-        <li>
-        <span class="icon"></span>
-        <span class="link">CHALLENGES</span>
-        <span class="indicator  pull-right">1</span>
-        </li>
-         <li>
-        <span class="icon"></span>
-        <span class="link"><%= link_to 'EVENTS', events_path %></span>
-        <span class="indicator  pull-right">1</span>
-        </li>
-         <li>
-        <span class="icon"></span>
-        <span class="link">ACTIVITIES</span>
-        <span class="indicator  pull-right">1</span>
-        </li>
-         <li>
-        <span class="icon"></span>
-        <span class="link">FRIENDS</span>
-        <span class="indicator  pull-right">1</span>
-        </li>
-      </ul>
 
-    </div>
-    
+      <div class="col-lg-6 col-md-6 col-sm-8" style="background-color: #fff;">
+        <h1>My Dashboard</h1>
+hello world
+        
+      </div>
 
-    <div class="col-lg-6 col-md-6 col-sm-8" style="background-color: #fff;">
-      <h1>My Dashboard</h1>
+      <div class="col-lg-3 col-md-3 col-sm-2" style="background-color: #eee;">
+<h2>Exercises</h2>
+        <div id="start_date" data-value="<%= @date %>"></div>
+        <%= render partial: '/shared/calendar', object: (@date.beginning_of_month.beginning_of_week(:sunday)..@date.end_of_month.end_of_week(:sunday)).to_a %>
+        <div class="clear"></div>
 
-      <h2>Exercises</h2>
-      <div id="start_date" data-value="<%= @date %>"></div>
-      <%= render partial: '/shared/calendar', object: (@date.beginning_of_month.beginning_of_week(:sunday)..@date.end_of_month.end_of_week(:sunday)).to_a %>
-    </div>
+        <h2>Workouts</h2>
 
-    <div class="col-lg-3 col-md-3 col-sm-2" style="background-color: #eee;">
-
-   <center>
-  <%= link_to "View Workout", profile_exercises_path(current_user.profile), class: "btn btn-primary link" %>
-  <%= link_to "New Workout", new_profile_exercise_path(current_user.profile), class: "btn btn-primary link" %>
-  </center>
-  <div style="width: 100%">
-  <%= content_tag :div, "", id: "chart", data: {workouts: current_user.profile.exercises} %>
-  </div>
+        <center>
+          <%= link_to "View Workout", profile_exercises_path(current_user.profile), class: "btn btn-primary link" %>
+          <%= link_to "New Workout", new_profile_exercise_path(current_user.profile), class: "btn btn-primary link" %>
+        </center>
+      <div style="width: 100%">
+        <%= content_tag :div, "", id: "chart", data: {workouts: current_user.profile.exercises} %>
+      </div>
+      
     </div>
   </div>
-</div>

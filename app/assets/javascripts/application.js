@@ -17,6 +17,7 @@
 //= require raphael.min
 //= require morris
 //= require datetimepicker
+//= require strftime
 //= require_tree .
 
 $(document).ready(function() {
