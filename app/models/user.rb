@@ -15,7 +15,7 @@ class User < ApplicationRecord
 
   #has_many :follows
   #has_many :followed_profiles, through: :follows
-
+#ddd
   # has_many :exercises
 
   def password_changed?
