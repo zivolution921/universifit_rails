@@ -1,0 +1,38 @@
+header {
+    position: relative;
+    height: 800px;
+    min-height: 500px;
+    width: 100%;
+    background: #161415 asset-url('run.jpg') no-repeat top center;
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    text-align: center;
+    overflow: hidden;
+}
+
+header .banner-text h1 {
+    color: #fff;
+    font: 58px/0.7em "Oswald",sans-serif !important;
+    height: 128px;
+    letter-spacing: 8px;
+    margin: 0 auto 18px;
+    text-transform: uppercase;
+}
+
+.x1 {
+    bottom: 0;
+}
+
+.x1, .x2 {
+    height: 68px !important;
+    left: 0;
+    margin: 0 auto !important;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    padding: 12px 0 0;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+}

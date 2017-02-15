@@ -10,6 +10,7 @@ class User < ApplicationRecord
               foreign_key: :user1_id, 
               association_foreign_key: :user2_id
   has_many :availabilities
+  has_many :follows, foreign_key: 'following_user_id'
 
   has_one :profile
 
@@ -17,6 +18,7 @@ class User < ApplicationRecord
   #has_many :followed_profiles, through: :follows
 #ddd
   # has_many :exercises
+
 
   def password_changed?
     self.password.present?
@@ -26,8 +28,19 @@ class User < ApplicationRecord
     "#{@name} - #{@email}"
   end
 
-  def follows_or_same?(new_friend)
-    friendships.map(&:friend).include?(new_friend) || self == new_friend
+  def following?(profile_id)
+    following = follows.where(following_user_id: self.id, 
+                  followed_profile_id: profile_id).first
+    following.present? ? following : false
+  end
+
+  def is_registered_for_event?(event)
+    registration = event.event_registrations.find_by(profile_id: profile.id)
+    registration.present? ? registration : false
+  end
+
+  def owns?(event)
+    event.profile == self.profile
   end
 
 end

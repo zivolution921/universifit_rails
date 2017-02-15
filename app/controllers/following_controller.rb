@@ -2,20 +2,21 @@ class FollowingController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    profile = Profile.find(params[:followed_profile_id])
-    Follow.create(following_params.merge!(followed_profile_id: params[:followed_profile_id],
-     user_id: current_user.id)) unless current_user.follows_or_same?(profile)
-    Follow.create(user: current_user, profile: profile)
+    Follow.create(
+      followed_profile_id: params[:followed_profile_id],
+      following_user_id: current_user.id
+    ) unless current_user.following?(params[:followed_profile_id])
     redirect_to :back
   end
 
-  # def destroy
-
-  # end
+  def destroy
+    Follow.destroy(params[:id])
+    redirect_to :back
+  end
 
   private
 
   def following_params
-    params.permit(:followed_profile_id, :user_id)
+    params.permit(:followed_profile_id, :following_user_id)
   end
 end

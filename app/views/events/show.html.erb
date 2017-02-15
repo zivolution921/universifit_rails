@@ -51,13 +51,20 @@
   <%= link_to "Who's Registered?", event_event_registrations_path(@event) %>
   
   <footer>
-    <%= register_link_for(@event) %>
+    <% if current_user.is_registered_for_event?(@event) %>
+      Awesome! You are going to this event!
+    <% else %>
+      <%= register_link_for(@event) %>
+    <% end %>
+    <% if current_user.owns?(@event) %>
+
     <nav>
       <%= link_to 'Edit', edit_event_path(@event), class: 'button' %>
       <%= link_to 'Delete', @event, 
                   class: 'button',
                   method: :delete, data: { confirm: 'Are you sure?' } %>
     </nav>
+    <% end %>
   </footer>
 </article>
 

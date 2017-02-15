@@ -12,6 +12,7 @@ class EventRegistration < ApplicationRecord
   
   validates :how_heard, 
             inclusion: { in: HOW_HEARD_OPTIONS }
+  validates_uniqueness_of :profile_id, :scope => :event_id
 
   belongs_to :event
   belongs_to :profile
