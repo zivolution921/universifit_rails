@@ -1,4 +1,13 @@
-<div><a id="follow_user_btn" data-profile-id="<%=params[:id]%>">Follow</a></div>
+<div class="row">
+  <div class="col-md-10 well member">
+    <%= if current_user %>
+      <%= link_to "Follow", following_index_path(friend_id: user.id), method: :post,
+          class: "btn btn-primary pull-right" unless current_user.follows_or_same?(user) %>
+          <div><a id="follow_user_btn" data-profile-id="<%=params[:id]%>">Follow</a></div>
+    <% end %>
+  </div>
+</div>
+
 
 <% if current_user.following?(params[:id])) %>
 YOU ARE FOLLOWING!

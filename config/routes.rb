@@ -18,6 +18,8 @@ Rails.application.routes.draw do
 
   resources :following, only: [:create]
 
+  resources :friendships, only: [:show, :create, :destroy]
+
   authenticated :user do
     root 'dashboard#index', as: :dashboard # dashboard_url
   end
