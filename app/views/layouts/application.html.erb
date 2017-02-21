@@ -6,8 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "UniversifitRails" %></title>
     <%= csrf_meta_tags %>
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic|Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
 
     <%= stylesheet_link_tag "application", :media => "all" %>
+
+    <!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+   <link rel="stylesheet" href="css/media-queries.css">
+   <link rel="stylesheet" href="css/magnific-popup.css">
+
+   <!-- Script
+   ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/jquery.typer.js"></script>
+    <script type="text/javascript" src="js/plax.js"></script>
+
 
     <!-- For third-generation iPad with high-resolution Retina display: -->
     <!-- Size should be 144 x 144 pixels -->
@@ -35,7 +57,314 @@
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js" type="text/javascript"></script>
     <![endif]-->
-    <%= csrf_meta_tags %>
+    <style type="text/css">
+
+      div#shell {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        height: 740px;
+        cursor: pointer;
+      }
+      div#shell.outline{
+        border: 0px solid #cccbc8;
+      }
+      div#shell{
+        z-index: 1;
+      }
+
+      .grid {
+        background: url("<%= image_tag 'grid2.png' %>") repeat scroll 12px 12px rgba(0, 0, 0, 0);
+        cursor: pointer;
+        display: block;
+        margin: 0;
+        min-height: 640px;
+        padding-bottom: 64px;
+        position: relative;
+        width: 100%;
+      }
+
+       img#user {
+        position: absolute;
+        top: 32px;
+        left: 47%;
+        z-index: 6;
+      }
+        img#mshad {
+        position: absolute;
+        top: 0px;
+        left: 46%;
+        z-index: 3;
+      }     
+        img#event {
+        position: absolute;
+        top: 300px;
+        left: 25%;
+        z-index: 6;
+        opacity: .5;
+      }
+        img#user2 {
+        position: absolute;
+        top: 280px;
+        right: 33%;
+        z-index: 6;
+        opacity: .5;
+      }
+        img#trainer {
+        position: absolute;
+        top: 280px;
+        left: 26%;
+        z-index: 6;
+        opacity: .5;
+      }
+
+      .homebox, .longhomebox {
+        display: block;
+        padding: 24px 24px 0;
+        position: relative;
+        width: 100%;
+      }
+      .homebox{margin:32px 0 0;}
+      .longhomebox{margin:480px 0 0;}
+      div#turn {
+        position: absolute;
+        top: 180px;
+        left: 48%;
+        z-index: 4;
+        display: block;      
+        width: 128px;
+        height: 156px; 
+        opacity: 0;
+      }
+      div.ldots {
+        position: absolute;
+        top: 150px;
+        right: 2%;
+        z-index: 3;
+        display: block;      
+        width: 128px;
+        height: 156px; 
+        opacity: 0;
+      }
+       div.rdots {
+        position: absolute;
+        top: 150px;
+        left: 2%;
+        z-index: 3;
+        display: block;      
+        width: 128px;
+        height: 156px; 
+        opacity: 0;
+      }     
+      .lq, .mq, .rq{
+        position: absolute;
+        display: inline-block;
+        width: 33.33%;
+        height: 100%;
+        z-index: 1;
+      }
+
+       .lq{
+        top: 0;
+        left: 0;
+        }  
+       .mq{
+        top: 0;
+        left: 33%;
+        }  
+       .rq{
+        top: 0;
+        left: 66%;
+        }  
+
+      .lq:hover .homebox{
+        outline: 4px solid #EFEFEF;
+        background-color: #FFF;
+      }
+      .mq:hover .longhomebox{
+        outline: 4px solid #EFEFEF;
+        background-color: #FFF;
+      }
+      .rq:hover .homebox{
+        outline: 4px solid #EFEFEF;
+        background-color: #FFF;
+      }
+      .lq:hover p{
+        border:0px !important;
+      }
+      .mq:hover p{
+        border:0px !important;
+      }
+      .rq:hover p{
+        border:0px !important;
+      }
+
+
+
+      .lq:hover .ldots{
+        opacity: 1;
+      }
+      .mq:hover #turn{
+        opacity: 1;
+      }
+      .rq:hover .rdots{
+        opacity: 1;
+      }
+
+      .lq:hover #trainer{
+        opacity: 1;
+      }
+      .mq:hover #event{
+        opacity: 1;
+      }
+      .rq:hover #user2{
+        opacity: 1;
+      }
+
+      .lq:hover .bb{
+        color: #F49F22;
+      }
+      .mq:hover .bb{
+        color: #F49F22;
+      }
+      .rq:hover  .bb{
+        color: #F49F22;
+      }
+
+
+       #event:hover{
+        opacity: 1;
+      }
+      #user2:hover {
+        opacity: 1;
+      }
+      #trainer:hover{
+        opacity: 1;
+      }
+
+
+
+.sk, .sk2, .sk3, .sk4{
+        display: block;  
+  width: 24px;
+  height: 24px;
+  margin: 0 0 8px;
+  background-color: #0A60DC;
+  border-radius: 100%;
+}
+      .sk {
+  -webkit-animation: sk-pulseScaleOut 1s infinite ease-in-out;
+          animation: sk-pulseScaleOut 1s infinite ease-in-out; }
+
+@-webkit-keyframes sk-pulseScaleOut {
+  0% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1); }
+
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0; } }
+
+@keyframes sk-pulseScaleOut {
+  0% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1); }
+
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0; } }
+     
+      .sk2 {
+  -webkit-animation: skScaleOut 1s infinite ease-in-out;
+          animation: skScaleOut 1s infinite ease-in-out; }
+  animation-delay:-0.05s;
+  -webkit-animation-delay:-0.05s; /* Safari 和 Chrome */
+
+@-webkit-keyframes skScaleOut {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5); }
+
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0; } }
+
+@keyframes skScaleOut {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5); }
+
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0; } }
+
+      .sk3 {
+  -webkit-animation: skaScaleOut 1s infinite ease-in-out;
+          animation: skaScaleOut 1s infinite ease-in-out; }
+
+
+@-webkit-keyframes skaScaleOut {
+  0% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75); }
+
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0; } }
+
+@keyframes skaScaleOut {
+  0% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75); }
+
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0; } }   
+      .sk4 {
+  -webkit-animation: skbScaleOut 1s infinite ease-in-out;
+          animation: skbScaleOut 1s infinite ease-in-out; }
+
+
+@-webkit-keyframes skbScaleOut {
+  0% {
+    -webkit-transform: scale(0.25);
+            transform: scale(0.25); }
+
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0; } }
+
+@keyframes skbScaleOut {
+  0% {
+    -webkit-transform: scale(0.25);
+            transform: scale(0.25); }
+
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0; } }     
+    </style>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#shell img').plaxify()
+        $.plax.enable({ "activityTarget": $('#shell')})
+      })
+    </script>
+        <script type="text/javascript">
+      $(document).ready(function () {
+        $('#shell div').plaxify()
+        $.plax.enable({ "activityTarget": $('#shell')})
+      })
+    </script>
   </head>
   <body>
   
