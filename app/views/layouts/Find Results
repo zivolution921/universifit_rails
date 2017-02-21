@@ -1,0 +1,213 @@
+Searching 23 files for "t-align: center" (case sensitive)
+
+/Users/ziv/Desktop/universifit_rails/app/assets/stylesheets/default.css:
+  405  .pagination {
+  406     margin: 36px auto;
+  407:    text-align: center;
+  408  }
+  409  .pagination ul li {
+  ...
+  509  	padding-left: 0 !important;
+  510  	padding-right: 0 !important;
+  511: 	text-align: center;
+  512  }
+  513  
+  ...
+  787  .no-border { border: none; }
+  788  
+  789: .text-center  { text-align: center !important; }
+  790  .text-left    { text-align: left !important; }
+  791  .text-right   { text-align: right !important; }
+  ...
+  795  	margin-left: auto !important;
+  796  	margin-right: auto !important;
+  797: 	text-align: center !important;
+  798  }
+  799  
+
+/Users/ziv/Desktop/universifit_rails/app/assets/stylesheets/events.scss:
+   39    footer {
+   40      margin: 2em 0;
+   41:     text-align: center;
+   42  
+   43      nav {
+   ..
+  106        font-size: 110%;
+  107        font-weight: bold;
+  108:       text-align: center;
+  109        margin-top: 1em;
+  110      }
+  ...
+  167    padding: 10px;
+  168    margin: 0;
+  169:   text-align: center;
+  170    text-transform: uppercase;
+  171    box-shadow: #ffc 0 0 4px;
+
+/Users/ziv/Desktop/universifit_rails/app/assets/stylesheets/events_layout.scss:
+   63  
+   64    p {
+   65:     text-align: center;
+   66      margin-bottom: 10px;
+   67    }
+
+/Users/ziv/Desktop/universifit_rails/app/assets/stylesheets/homepage.scss:
+    7      background-size: cover !important;
+    8      -webkit-background-size: cover !important;
+    9:     text-align: center;
+   10      overflow: hidden;
+   11  }
+   ..
+   29      margin: 0 auto !important;
+   30      position: absolute;
+   31:     text-align: center;
+   32      width: 100%;
+   33      padding: 12px 0 0;
+
+/Users/ziv/Desktop/universifit_rails/app/assets/stylesheets/layout.scss:
+   37      background-size: cover !important;
+   38      -webkit-background-size: cover !important;
+   39:     text-align: center;
+   40      overflow: hidden;
+   41  }
+   ..
+   54     width: 85%;
+   55     padding-bottom: 30px;
+   56:    text-align: center;
+   57  }
+   58  
+   ..
+  150  
+  151     /* center align the menu */
+  152:    text-align: center;
+  153  }
+  154  ul#nav li {
+  ...
+  247  .cntr {
+  248      position: absolute;
+  249:     text-align: center;    
+  250      margin: auto;
+  251      display: block;
+  ...
+  262    margin: 0 auto !important;
+  263    position: absolute;
+  264:   text-align: center;
+  265    width: 100%;
+  266    padding: 12px 0 0;
+  ...
+  754     text-transform: uppercase;
+  755     letter-spacing: 1px;
+  756:    text-align: center;
+  757     margin-bottom: 48px;
+  758     color: #95A3A3;
+  ...
+  803     font-size: 18px;
+  804     line-height: 30px;
+  805:    text-align: center;
+  806  
+  807     opacity: 0;
+  ...
+ 1048    padding: 0;
+ 1049    position: relative;
+ 1050:   text-align: center;
+ 1051  }
+ 1052  .flexslider .slides { zoom: 1; }
+ ....
+ 1263     color: #303030;
+ 1264     font-size: 14px;
+ 1265:    text-align: center;
+ 1266     position: relative;
+ 1267  }
+
+/Users/ziv/Desktop/universifit_rails/app/assets/stylesheets/magnific-popup.css:
+   23  
+   24  .mfp-container {
+   25:   text-align: center;
+   26    position: absolute;
+   27    width: 100%;
+   ..
+   88    top: 50%;
+   89    width: auto;
+   90:   text-align: center;
+   91    margin-top: -0.8em;
+   92    left: 8px;
+   ..
+  128    top: 0;
+  129    text-decoration: none;
+  130:   text-align: center;
+  131    opacity: 0.65;
+  132    filter: alpha(opacity=65);
+  ...
+  334      background: rgba(0, 0, 0, 0.6);
+  335      position: fixed;
+  336:     text-align: center;
+  337      padding: 0; } }
+  338  
+
+/Users/ziv/Desktop/universifit_rails/app/assets/stylesheets/media-queries.css:
+  219     #about .download .button {
+  220        width: 100%;
+  221:       text-align: center;
+  222        padding: 15px 20px;
+  223     }
+  ...
+  230        padding-top: 0;
+  231        margin-bottom: 48px;
+  232:       text-align: center;
+  233     }
+  234     #resume h1 { letter-spacing: 3px; }
+  235     #resume .main-col { padding-right: 30px; }
+  236:    #resume h3, #resume .info { text-align: center; }
+  237        
+  238     .bars { width: 100%; }
+  ...
+  241     /* Call To Action Section
+  242     /* ----------------------------------------------------------------- */
+  243:    #call-to-action { text-align: center; }
+  244     #call-to-action h1 {
+  245        font: 16px/24px 'opensans-bold', sans-serif;
+  246:       text-align: center;
+  247        margin-bottom: 30px;
+  248        text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
+  ...
+  261     /* Testimonials Section
+  262     ----------------------------------------------------------------------- */
+  263:    #testimonials .text-container { text-align: center; }
+  264     #testimonials h1 {
+  265        font: 16px/24px 'opensans-bold', sans-serif;
+  266:       text-align: center;
+  267        margin-bottom: 30px;
+  268        text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
+  ...
+  278     /* Control Nav */
+  279     .flex-control-nav {
+  280:       text-align: center;
+  281        margin-left: -30px;
+  282     }
+  ...
+  289     #contact .section-head h1 {
+  290        font: 16px/24px 'opensans-bold', sans-serif;            
+  291:       text-align: center;   
+  292        margin-bottom: 30px;
+  293        text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
+  ...
+  296     #contact .header-col { padding-top: 0; }
+  297     #contact .header-col h1:before { content: none;	}
+  298:    #contact .section-head p.lead { text-align: center;}
+  299  
+  300     /* form */
+
+/Users/ziv/Desktop/universifit_rails/app/assets/stylesheets/sidebar.css:
+   20      top: -4px;
+   21      padding: 3px 6px;
+   22:     text-align: center;
+   23      
+   24      transition: all 0.3s ease 0s;
+   ..
+   30      /* text-shadow: 0 0 black; */
+   31      padding: 8px;
+   32:     text-align: center;
+   33  }
+   34  
+
+35 matches across 8 files
