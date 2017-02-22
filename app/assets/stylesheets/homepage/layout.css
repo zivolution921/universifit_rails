@@ -22,7 +22,7 @@
 /* a. General Styles
 /* ------------------------------------------------------------------ */
 
-body { background: #0f0f0f; }
+
 
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
@@ -358,6 +358,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#141414', end
 
 }
 
+
+.button, .button:visited, button, input[type="submit"], input[type="reset"], input[type="button"] {
+    font: 16px/30px 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #005FC2;
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: 0;
+    color: #fff;
+    padding: 12px 20px;
+    margin-bottom: 18px;
+    border: none;
+    cursor: pointer;
+    height: auto;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
 
 #home .button {
   background: none repeat scroll 0 0 transparent;

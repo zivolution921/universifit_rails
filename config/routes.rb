@@ -24,10 +24,6 @@ Rails.application.routes.draw do
     root 'dashboard#index', as: :dashboard # dashboard_url
   end
 
-  
-
-  
-
   root to: 'homepage#index' # root_url/path
 
  

@@ -18,9 +18,12 @@
 //= require morris
 //= require datetimepicker
 //= require strftime
+//= require jquery.typer.js
 //= require_tree .
 
 $(document).ready(function() {
+  $('[data-typer-targets]').typer() 
+  
   $('.datetimepicker').datetimepicker({
     inline: true
   })
