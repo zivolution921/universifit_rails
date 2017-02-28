@@ -2,11 +2,11 @@
   <% @events.each do |event| %>
     <li>
       <article class="event">
-        <header>
+        <div>
           <%= image_for(event) %>
           <h2><%= link_to(event.name, event) %></h2>
           <h3><%= pluralize(event.spots_left, 'spot') %> available</h3>
-        </header>
+        </div>
         <p>
           <%= truncate(event.description, length: 150, separator: ' ') %>
         </p>

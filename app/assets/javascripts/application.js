@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery-ui/widgets/datepicker
 //= require jquery_ujs
 //= require twitter/bootstrap
@@ -18,13 +19,5 @@
 //= require morris
 //= require datetimepicker
 //= require strftime
-//= require jquery.typer.js
-//= require_tree .
 
-$(document).ready(function() {
-  $('[data-typer-targets]').typer() 
-  
-  $('.datetimepicker').datetimepicker({
-    inline: true
-  })
-})
+//= require_tree .

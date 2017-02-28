@@ -1,0 +1,18 @@
+.navbar {
+  margin-bottom: 0 !important;
+  max-height: 60px;
+}
+
+.navbar-default {
+    background-color: rgb(0, 119, 242);
+    border-color: none;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    text-decoration: none;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: #fff;
+  text-decoration: underline;
+  }
