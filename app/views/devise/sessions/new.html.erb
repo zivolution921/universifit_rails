@@ -5,7 +5,9 @@
     <div class="control-label col-sm-2">
       <%= f.label :email %>
     </div>
-    <%= f.email_field :email, autofocus: true %>
+    <div class="col-sm-8">
+      <%= f.email_field :email, class: "form-control", placeholder: "Enter email", autofocus: true %>
+    </div>
   </div>
 
   <div class="field">
