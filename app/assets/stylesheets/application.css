@@ -17,8 +17,15 @@
  *= require_tree ./application
  */
 
+ body, html { 
+ -webkit-font-smoothing: antialiased;
+}
+
 a.btn, a.btn:link, a.btn:visited {
-    color: #fff;
     text-decoration: none;
 }
 
+a.btn-default {
+  color: #aaa !important;
+
+}

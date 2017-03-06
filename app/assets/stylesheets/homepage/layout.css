@@ -1144,6 +1144,7 @@ header .banner {
     margin: 0 auto;
     width: 85%;
     padding-bottom: 30px;
+        padding-top: 60px;
 }
 #a1 {
     cursor: pointer;
@@ -1571,4 +1572,8 @@ header .scrolldown a {
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     -moz-transition: all 0.3s;
+}
+
+.x1 span, .x2 span {
+    color: #A7D2FF;
 }
