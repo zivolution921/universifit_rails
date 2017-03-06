@@ -16,3 +16,17 @@
   color: #fff;
   text-decoration: underline;
   }
+
+  .navbar-nav {
+    padding-top: 8px;
+  }
+
+.btn-settings,
+.btn-settings:hover,  .btn-settings:focus, 
+.btn-settings.focus,  .btn-settings:active,
+.btn-settings.active, 
+.open > .dropdown-toggle.btn-settings {
+  color: white;
+    background-color: transparent;
+    border-color: transparent;
+}

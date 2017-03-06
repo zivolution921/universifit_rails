@@ -1,67 +1,62 @@
+<div class="container">
+  <div class="row">
+    <div class="sidebar col-lg-3 col-md-3 col-sm-2" style="background-color: #eee;">
+      <div class="avatar"><img class="img-responsive" src="/assets/default_avatar.png">
+      </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="sidebar col-lg-3 col-md-3 col-sm-2" style="background-color: #eee;">
-        <div class="avatar">
-          <img src="/assets/default_avatar.png" class="img-responsive" />
-        </div>
-        <div class="display-name">
+
+      <div class="display-name">
         <%= current_user.profile.name %>
-        </div>
-
-        
-        <ul class="sidebar-items">
-          <li>
-          <span class="icon"><span class="i-comment fs20" /></span>
-          <span class="link">MESSAGES</span>
-          <span class="indicator pull-right">8</span>
-          </li>
-          <li>
-          <span class="icon"></span>
-          <span class="link">CHALLENGES</span>
-          <span class="indicator  pull-right">1</span>
-          </li>
-           <li>
-          <span class="icon"></span>
-          <span class="link"><%= link_to 'EVENTS', events_path %></span>
-          <span class="indicator  pull-right">1</span>
-          </li>
-           <li>
-          <span class="icon"></span>
-          <span class="link">ACTIVITIES</span>
-          <span class="indicator  pull-right">1</span>
-          </li>
-           <li>
-          <span class="icon"></span>
-          <span class="link">FRIENDS</span>
-          <span class="indicator  pull-right">1</span>
-          </li>
-        </ul>
-
-      </div>
-      
-
-      <div class="col-lg-6 col-md-6 col-sm-8" style="background-color: #fff;">
-        <h1>My Dashboard</h1>
-hello world
-        
       </div>
 
-      <div class="col-lg-3 col-md-3 col-sm-2" style="background-color: #eee;">
-<h2>Exercises</h2>
-        <div id="start_date" data-value="<%= @date %>"></div>
-        <%= render partial: '/shared/calendar', object: (@date.beginning_of_month.beginning_of_week(:sunday)..@date.end_of_month.end_of_week(:sunday)).to_a %>
-        <div class="clear"></div>
 
-        <h2>Workouts</h2>
+      <ul class="sidebar-items">
+        <li><span class="icon"><span class="i-comment fs20"></span></span> <span class="link">MESSAGES</span> <span class="indicator pull-right">8</span></li>
 
-        <center>
-          <%= link_to "New Workout", profile_exercises_path(current_user.profile), class: "btn btn-primary link" %>
-          
-        </center>
+
+        <li><span class="icon"><span class="i-lightning fs20"></span></span> <span class="link">CHALLENGES</span> <span class="indicator pull-right">1</span></li>
+
+
+        <li><span class="icon"><span class="i-groups fs20"></span></span> <span class="link"><%= link_to 'EVENTS', events_path %></span> <span class="indicator pull-right">1</span></li>
+
+
+        <li><span class="icon"><span class="i-cog fs20"></span></span> <span class="link">ACTIVITIES</span> <span class="indicator pull-right">1</span></li>
+
+
+        <li><span class="icon"><span class="i-user fs20"></span></span> <span class="link">FRIENDS</span> <span class="indicator pull-right">1</span></li>
+      </ul>
+    </div>
+
+
+    <div class="col-lg-6 col-md-6 col-sm-8" style="background-color: #fff;">
+      <h1>My Dashboard</h1>
+      hello world
+    </div>
+
+
+    <div class="col-lg-3 col-md-3 col-sm-2" style="background-color: #eee;">
+      <h2>Exercises</h2>
+
+
+      <div data-value="<%= @date %>" id="start_date">
+      </div>
+      <%= render partial: '/shared/calendar', object: (@date.beginning_of_month.beginning_of_week(:sunday)..@date.end_of_month.end_of_week(:sunday)).to_a %>
+
+      <div class="clear">
+      </div>
+
+
+      <h2>Workouts</h2>
+
+
+      <center>
+        <%= link_to "New Workout", profile_exercises_path(current_user.profile), class: "btn btn-primary link" %>
+      </center>
+
+
       <div style="width: 100%">
         <%= content_tag :div, "", id: "chart", data: {workouts: current_user.profile.exercises} %>
       </div>
-      
     </div>
   </div>
+</div>

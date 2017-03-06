@@ -1538,6 +1538,9 @@ header .scrolldown a {
     -ms-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
+#home .button.primary {
+  background-color: green;
+}
 #two {
     padding-top: 96px;
     position: relative;

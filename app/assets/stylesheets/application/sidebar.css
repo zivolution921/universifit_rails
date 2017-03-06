@@ -1,6 +1,13 @@
 .sidebar {
   padding-left: 0 !important;
   padding-right: 0 !important;
+  font-family: 'Archivo Narrow', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #444;
+    font-size: 1.2em;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 90%;
 }
 
 ul.sidebar-items {
@@ -11,6 +18,20 @@ ul.sidebar-items {
 ul.sidebar-items li {
   border-bottom: 1px solid #D9D9D9;
   padding: 21px 20px 17px;
+}
+
+ul.sidebar-items li:hover,
+ul.sidebar-items li:hover a {
+  background: #0077F2;
+  color: #fff;
+}
+
+ul.sidebar-items li:hover .indicator {
+  background: red;
+}
+
+ul.sidebar-items li a {
+  color: #444;
 }
 
 ul.sidebar-items li .indicator {
