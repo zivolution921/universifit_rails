@@ -28,7 +28,7 @@ Rails.application.routes.draw do
 
   resource :dashboard, only: [:index] do 
     collection do 
-      post :Seach, to: 'dashboard#search'
+      post :search, to: 'dashboard#search'
     end
   end
 

@@ -4,6 +4,6 @@ class DashboardController < ApplicationController
   end
 
   def search 
-    @user = current_user.profile.search_by_name(params[:search_name]).paginate(:page => params[:page])
+    @users = current_user.profile.search_by_name(params[:search_name]).paginate(:page => params[:page])
   end
 end
