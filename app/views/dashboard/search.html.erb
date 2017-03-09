@@ -1,0 +1,9 @@
+<div class="row search-result">
+  <% @users.each do |user| %>
+    <div class="col-md-10 col-md-offset-2 well member">
+      <%= user.name %>
+    </div>
+  <% end %>
+</div>
+
+<%= will_paginate @users, renderer: BootstrapPagination::Rails %>
