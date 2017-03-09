@@ -26,6 +26,12 @@ Rails.application.routes.draw do
 
   root to: 'homepage#index' # root_url/path
 
+  resource :dashboard, only: [:index] do 
+    collection do 
+      post :Seach, to: 'dashboard#search'
+    end
+  end
+
  
 
 end
