@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   resources :following, only: [:create, :destroy]
 
   resources :friendships, only: [:show, :create, :destroy]
+  resources :search, only: [:index]
 
   authenticated :user do
     root 'dashboard#index', as: :dashboard # dashboard_url
@@ -26,12 +27,7 @@ Rails.application.routes.draw do
 
   root to: 'homepage#index' # root_url/path
 
-  resource :dashboard, only: [:index] do 
-    collection do 
-      post :search, to: 'dashboard#search'
-    end
-  end
-
+  resource :dashboard, only: [:index]
  
 
 end

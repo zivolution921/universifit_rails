@@ -1,25 +1,25 @@
-<div class="row">
-  <div class="col-md-10 well member">
+<div class="col-md-10 col-md-offset-1">
+  <div class=" row well member">
     <% if following = current_user.following?(params[:id]) %>
       You are following <%= @profile.name %>.<br>
       <%= form_tag "/following/#{following.id}", method: 'delete' do |f| %>
         
-        <input type=submit value="Unfollow" />
+        <input type=submit value="Unfollow" class="btn btn-default" />
       <%- end %>
     <% else %>
       <%= form_tag "/following" do |f| %>
         <input type=hidden id="following_user_id" name="following_user_id" value="<%= current_user.id %>" />
         <input type=hidden id="followed_profile_id" name="followed_profile_id" value="<%= params[:id] %>" />
-        <input type=submit value="Follow me" />
+        <input type=submit value="Follow me" class="btn btn-primary" />
       <%- end %>
     <% end %>
   </div>
-</div>
-
-<div>
+  <div>
 <%= @profile.name %>
 </div>
 
 <div>
 <%= @profile.location_name_or_custom_location %>
 </div>
+</div>
+

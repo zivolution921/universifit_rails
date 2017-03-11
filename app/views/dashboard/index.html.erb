@@ -8,7 +8,10 @@
       <div class="display-name">
         <%= current_user.profile.name %>
       </div>
+<script>
+  
 
+</script>
 
       <ul class="sidebar-items">
         <li><span class="icon"><span class="i-comment fs20"></span></span> <span class="link">MESSAGES</span> <span class="indicator pull-right">8</span></li>
@@ -35,23 +38,20 @@
 
 
     <div class="col-lg-3 col-md-3 col-sm-2" style="background-color: #eee;">
-      <h2>Exercises</h2>
-
+      <h4>Scheduled Exercises</h4>
+      <div class="small">* Click a day to see or
+      create a new workout</div>
 
       <div data-value="<%= @date %>" id="start_date">
       </div>
       <%= render partial: '/shared/calendar', object: (@date.beginning_of_month.beginning_of_week(:sunday)..@date.end_of_month.end_of_week(:sunday)).to_a %>
 
+
       <div class="clear">
       </div>
 
-
-      <h2>Workouts</h2>
-
-
-      <center>
-        <%= link_to "New Workout", profile_exercises_path(current_user.profile), class: "btn btn-primary link" %>
-      </center>
+      <%= link_to "All Events", events_path, class: 'btn btn-default btn-upcoming-events' %>
+      <%= link_to 'Add New Event', new_event_path, class: 'btn btn-default btn-create-event' %>
 
 
       <div style="width: 100%">

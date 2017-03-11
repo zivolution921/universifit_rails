@@ -13,19 +13,9 @@ fieldset {
     margin-bottom: .25em;
   }
 
-  ol {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      margin: 0 0 20px 0;
-      padding: 0;
-
-      &.required label {
-        font-weight: bold;
-      }
-    }
+  label.required:before {
+    content:"* ";
+    color:red;
   }
 
   input,
@@ -62,6 +52,7 @@ fieldset {
   }
 }
 
+/*
 input[type="submit"] {
   border-radius:5px 5px 5px 5px;
   -moz-border-radius:5px 5px 5px 5px;
@@ -73,4 +64,13 @@ input[type="submit"] {
   background-image:linear-gradient(-90deg, rgb(0, 119, 242), rgb(15, 99, 187));
   background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, from(rgb(0, 119, 242)), to(rgb(15, 99, 187)));
   background-image:-moz-linear-gradient(-90deg, rgb(0, 119, 242), rgb(15, 99, 187));
+}
+*/
+
+.btn-upcoming-events {
+  background: image-url("arrow.png") no-repeat 10px 8px;
+}
+
+.btn-create-event {
+  background: image-url("add.png") no-repeat 10px 8px;
 }

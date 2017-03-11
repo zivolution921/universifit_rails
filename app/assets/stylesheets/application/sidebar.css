@@ -18,6 +18,7 @@ ul.sidebar-items {
 ul.sidebar-items li {
   border-bottom: 1px solid #D9D9D9;
   padding: 21px 20px 17px;
+  cursor: pointer;
 }
 
 ul.sidebar-items li:hover,

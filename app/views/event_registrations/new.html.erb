@@ -1,20 +1,25 @@
-<header id="content-header">
+<div id="content-header">
   <h1>Registration for <%= link_to @event.name, @event %></h1>
-</header>
+</div>
 
 <%= form_for([@event, @event_registration]) do |f| %>
 <%= render 'shared/errors', object: @event_registration %>
   <fieldset>
-    <ol>
-      <li class="required">
-        <%= f.label :how_heard %>
+  <div class="row">
+  <div class="col-md-3">
+
+        <%= f.label :how_heard, class: 'required' %>
         <%= f.select :how_heard,
-                      EventRegistration::HOW_HEARD_OPTIONS, prompt: "Pick one" %>
-      </li>
-    </ol>
-    <p>
-      <%= f.submit %>
-      <%= link_to "Cancel", events_path, class: "button" %>
-    </p>
+                      EventRegistration::HOW_HEARD_OPTIONS, { prompt: "Pick one"
+                      },
+                      { class: 'form-control required' } %>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <%= f.submit class: 'btn btn-primary' %>
+      <%= link_to "Cancel", events_path, class: "btn btn-default" %>
+    </div>
+  </div>
   </fieldset>
 <% end %>
