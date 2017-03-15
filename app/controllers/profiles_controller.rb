@@ -28,6 +28,7 @@ class ProfilesController < ApplicationController
   def show
     @event_registrations = profile.event_registrations
     @liked_events = profile.liked_events
+    @activities = PublicActivity::Activity.where(owner_id: @user.id)
   end
 
   private
