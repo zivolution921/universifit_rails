@@ -1,5 +1,5 @@
 class FriendsController < ApplicationController
-
+  before_action :set_user, only: [:create]
   def index
     @friends = current_user.friends
   end
@@ -9,6 +9,12 @@ class FriendsController < ApplicationController
     respond_to do |format| 
       format.html {redirect_to user_path, notice: "Friendship Created"}
     end
+  end
+
+  private
+
+  def set_user
+    @user = User.find(params[:user_id])
   end
 
 end
