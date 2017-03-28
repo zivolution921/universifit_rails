@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   resources :following, only: [:create, :destroy]
 
-  resources :friendships, only: [:show, :create, :destroy]
+  resources :friends, only: [:index]
   resources :search, only: [:index]
 
   authenticated :user do

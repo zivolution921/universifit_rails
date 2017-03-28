@@ -10,6 +10,8 @@ class Profile < ApplicationRecord
   validates :location_id, presence: true, if: :has_no_custom_location?
   validates :custom_location, presence: true, if: :has_no_location_id?
 
+  has_many :follows, foreign_key: 'followed_profile_id'
+  has_many :followers, through: :follows, source: :user
 
   def has_no_custom_location?
     self.custom_location.blank?

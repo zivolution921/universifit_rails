@@ -4,13 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_and_belongs_to_many :friends, 
-              class_name: "User", 
-              join_table: :friendships, 
-              foreign_key: :user1_id, 
-              association_foreign_key: :user2_id
   has_many :availabilities
+
   has_many :follows, foreign_key: 'following_user_id'
+  has_many :followings, through: :follows, source: :profile
 
   has_one :profile
 
@@ -41,6 +38,10 @@ class User < ApplicationRecord
 
   def owns?(event)
     event.profile == self.profile
+  end
+
+  def friends
+    follows.select {|f| f.friends? }.map {|f| f.user }
   end
 
 end
