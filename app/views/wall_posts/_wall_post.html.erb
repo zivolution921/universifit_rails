@@ -1,0 +1,12 @@
+<div class="comment">
+  <h3><%= wall_post.title %></h3>
+  <blockquote><%= raw wall_post.content %></blockquote>
+  <% if current_profile != wall_post.profile %>
+  <%= link_to "Comment", "#", class: 'show-comment' %>
+  <%= render 'comments/new', wall_post_id: wall_post.id %>
+  <% end %>
+  <% wall_post.comments.each do |comment| %>
+  <p><%= comment.content %> - <%= comment.profile.name %></p>
+  <% end %>
+  <hr />
+</div>

@@ -20,6 +20,8 @@ Rails.application.routes.draw do
 
   resources :friends, only: [:index]
   resources :search, only: [:index]
+  resources :wall_posts
+  resources :comments
 
   authenticated :user do
     root 'dashboard#index', as: :dashboard # dashboard_url

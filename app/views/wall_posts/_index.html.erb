@@ -1,0 +1,1 @@
+<%= render (params[:id].present? ? Profile.find(params[:id]) :current_profile).wall_posts %>

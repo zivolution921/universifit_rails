@@ -1,3 +1,5 @@
-<% @friends.each do |friend| %>
-  <%= friend.user.name %>
-<%end %>
+<ul class="friend-list">
+  <% @friends.each do |friend| %>
+    <li><%= friend.profile.name %></li>
+  <% end %>
+</ul>

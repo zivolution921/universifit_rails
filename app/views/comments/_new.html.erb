@@ -1,0 +1,6 @@
+<%= form_for Comment.new, html: { class: 'hidden' } do |f| %>
+<%= f.hidden_field :commentable_id, value: wall_post_id %>
+<%= f.hidden_field :commentable_type, value: "WallPost" %>
+  <%= f.text_area :content, class:"form-control", rows: 4 %>
+  <%= f.submit 'Leave your thoughts', class: 'form-control'%>
+<% end %>

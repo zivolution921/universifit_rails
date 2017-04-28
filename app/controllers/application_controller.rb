@@ -8,4 +8,9 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def current_profile
+    current_user && current_user.profile
+  end
+  helper_method :current_profile
+
 end

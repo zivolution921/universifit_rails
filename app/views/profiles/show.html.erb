@@ -4,8 +4,8 @@
     <% if following = current_user.following?(params[:id]) %>
       You are following <%= @profile.name %>.<br>
       <%= form_tag "/following/#{following.id}", method: 'delete' do |f| %>
-        
-        <input type=submit value="Unfollow" class="btn btn-default" />
+
+      <input type=submit value="Unfollow" class="btn btn-default" />
       <%- end %>
     <% else %>
       <%= form_tag "/following" do |f| %>
@@ -15,12 +15,20 @@
       <%- end %>
     <% end %>
   </div>
+
   <div>
-<%= @profile.name %>
+    <%= @profile.name %>
+  </div>
+
+  <div>
+    <%= @profile.location_name_or_custom_location %>
+  </div>
+
 </div>
 
-<div>
-<%= @profile.location_name_or_custom_location %>
-</div>
+<div class="col-md-10 col-md-offset-1">
+  <div class=" row well member">
+    <%= render 'wall_posts/index' %>
+  </div>
 </div>
 

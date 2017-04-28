@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- the doctype tells the browser what type of html it is in this case it is html5 -->
+<html>
+<head>
+  <title>My Website Title</title>
+  <link rel="stylesheet" href="main.css">
+  <!-- External link to bootstrap css file - we can get this from getbootstrap.com -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  
+  <style>
+    /* 
+    using the hash targets an element by it's id 
+    for example the class below will add padding to the element <div id="home">
+    */
+    #home, #portfolio, #about, #contact {
+      padding-top:100px;
+      padding-bottom:100px;
+    }
+  </style>
+  
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">YOUR NAME</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <!-- A website navigation contains <a> tags (known as anchor tags) - These are links to other pages or
+        to a location on the same page -->
+        <li class="active"><a href="#home">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<!-- don't put container div first, show the website without it, then you can show them with it
+This will show the difference -->
+<div class="container">
+
+  <div id="home">
+
+    <h1>YOUR NAME</h1>
+    
+    <!-- target="blank" is used to open the link in a new page -->
+    <p><a target="_blank" href="http://linkedin.com">Click here</a> to Connect with me on linked in</p>
+    
+    <img src="http://placehold.it/600x300" />
+
+  </div>
+
+  <div id="portfolio">
+    
+    <h2>Porfolio</h2>
+    
+    <div class="row">
+      
+      <!-- TASK - make the image round - tip: look on bootstrap for documentation about images -->
+      
+      <div class="col-md-4">
+      
+        <!-- the alt attribute is so that if the image fails to load, the text will display instead  -->
+        <img class="img-responsive img-circle"  src="http://placehold.it/400x400" alt="A description of the image" />
+        
+      </div>
+      
+      <div class="col-md-4">
+        <img class="img-responsive img-rounded" src="http://placehold.it/400x400" alt="A description of the image" />
+      </div>
+      
+      <div class="col-md-4">
+        <img class="img-responsive" src="http://placehold.it/400x400" alt="A description of the image" />
+      </div>
+      
+    </div>
+    
+  </div>
+
+  <div id="about">
+    
+    <h2>About Me</h2>
+    <!-- when the link #about is clicked, the user will be taken down the page to here -->
+    
+    <!-- paragraph tags -->
+    <p>Quisque id erat posuere, varius neque in, pulvinar purus. Morbi consequat massa vitae velit porta faucibus. Donec ultrices turpis in lacus auctor condimentum. Nunc quis nunc orci. Curabitur imperdiet nunc sed sagittis varius. Donec vulputate interdum nunc, a porta dolor cursus in. Nam ornare mi non felis condimentum, eu semper velit commodo.</p>
+
+    <p>Etiam molestie scelerisque diam sit amet ultrices. Duis a purus et mauris rhoncus sollicitudin. Sed nec mollis ex. Nulla facilisi. Integer facilisis vestibulum arcu. Fusce quis lacus venenatis, auctor velit vel, tempor risus. Phasellus tincidunt justo sed sagittis egestas.</p>
+    
+    <!-- I want you to list 5 things you enjoy about web development -->
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    
+  </div>
+  
+  <div id="contact">
+    
+    <!-- we can add a title by using the <h1> or <h2> tag (explain the sizes) -->
+    <h2>Contact</h2>
+    
+    <!-- contact form to send an email -->
+    
+    <!-- go to getbootstrap.com and go to CSS -> Forms -->
+    
+    <!-- a form always has an action -->
+    <!-- here we can see the action will open a new email message to the email address specified in "mailto"  -->
+    <form action="mailto:hello@example.com">
+      <div class="form-group">
+        <label>Name</label>
+        <input name="name" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea class="form-control" name="message"></textarea>
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+    
+  </div>
+
+  <footer>
+    
+    <p class="text-center">Copyright &copy; 2017 Steves Awesome Website</p>
+    
+  </footer>
+
+</div>
+
+</body>
+</html>

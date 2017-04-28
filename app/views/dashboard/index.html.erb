@@ -26,14 +26,15 @@
         <li><span class="icon"><span class="i-cog fs20"></span></span> <span class="link">ACTIVITIES</span> <span class="indicator pull-right">1</span></li>
 
 
-        <li><span class="icon"><span class="i-user fs20"></span></span> <span class="link">FRIENDS</span> <span class="indicator pull-right">1</span></li>
+        <li><span class="icon"><span class="i-user fs20"></span></span> <span class="link"><%= link_to 'FRIENDS', friends_path %></span> <span class="indicator pull-right">1</span></li>
       </ul>
     </div>
 
 
     <div class="col-lg-6 col-md-6 col-sm-8" style="background-color: #fff;">
-      <h1>My Dashboard</h1>
-      hello world
+      
+      <%= render 'wall_posts/new' %>
+      <%= render 'wall_posts/index' %>
     </div>
 
 

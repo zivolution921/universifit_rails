@@ -7,6 +7,9 @@ class Profile < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :liked_events, through: :likes, source: :event
 
+  has_many :wall_posts
+  has_many :comments
+
   validates :location_id, presence: true, if: :has_no_custom_location?
   validates :custom_location, presence: true, if: :has_no_location_id?
 
