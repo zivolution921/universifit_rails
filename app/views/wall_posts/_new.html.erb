@@ -1,5 +1,5 @@
 <%= form_for current_user.profile.wall_posts.build do |f| %>
-  <%= f.text_field :title, class:"form-control" %>
-  <%= f.text_area :content, placeholder: "Post description", class:"form-control", rows: 4 %>
+  <%= f.text_field :title, placeholder: "Post Title", class:"form-control" %>
+  <%= f.text_area :content, placeholder: "Post Description", class:"form-control", rows: 4 %>
   <%= f.submit 'Post', class: 'form-control'%>
 <% end %>
