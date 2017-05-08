@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  challenge_category: one
+  text: MyText
+  challenger_id: 1
+  challenged_id: 1
+  accepted_at: 2017-05-08 12:43:22
+  copmleted_at: 2017-05-08 12:43:22
+
+two:
+  challenge_category: two
+  text: MyText
+  challenger_id: 1
+  challenged_id: 1
+  accepted_at: 2017-05-08 12:43:22
+  copmleted_at: 2017-05-08 12:43:22

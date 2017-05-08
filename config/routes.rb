@@ -9,8 +9,11 @@ Rails.application.routes.draw do
  
   resources :profiles do 
     resources :exercises # Exercises url
-    
+    resources :challenges, only: %i(new create)
   end
+
+  resources :challenges, only: %i(index show)
+
   resources :events do 
       resources :event_registrations
       resources :likes

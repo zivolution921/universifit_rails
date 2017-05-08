@@ -5,4 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Admin.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+if !Admin.exists?(email: 'admin@example.com')
+  Admin.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+end
+
+ChallengeCategory.find_or_create_by name: 'Running'
+ChallengeCategory.find_or_create_by name: 'Pushups'
