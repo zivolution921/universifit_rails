@@ -1,5 +1,6 @@
+<h2>Create A Challenge</h2>
 <%= form_for [@challenged, @challenge] do |f| %>
   <%= f.collection_select :category, ChallengeCategory.all, :id, :name, class: 'form-control' %>
-  <%= f.text_area :text, rows: 3, class: 'form-control' %>
-  <%= f.submit 'Initiate challenge!' %>
+  <%= f.text_area :text, rows: 2, class: 'form-control' %>
+  <%= f.submit 'Initiate challenge!', class: "btn btn-primary center-block" %>
 <% end %>
