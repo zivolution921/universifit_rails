@@ -10,7 +10,6 @@ class ChallengesController < ApplicationController
   end
 
   def create
-    byebug
     category = ChallengeCategory.find(challenge_params[:category])
     if new_challenge(challenge_params.merge(category: category)).save
       redirect_to :dashboard
