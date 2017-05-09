@@ -28,8 +28,20 @@
   <tr>
     <td><%= challenge_row.challenger %></td>
     <td><%= challenge_row.category.name %></td>
-    <td><%= challenge_row.accepted? ? "&#x2714;" : '' %> </td>
-    <td><%= challenge_row.completed? ? "&#x2714;" : '' %> </td>
+    <td>
+    <% if challenge_row.accepted? %>
+      &#x2714;
+    <% else %>
+      <%= link_to("Accept", challenge_actions_path(challenge_id: challenge_row.id, challenge_action: :accept), method: :post) %>
+      <%= link_to("Reject", challenge_actions_path(challenge_id: challenge_row.id, challenge_action: :reject), method: :post) %>
+    <% end %>
+    </td>
+    <td><%if challenge_row.completed? %>
+    &#x2714;
+    <% else %>
+    <%= link_to("Complete", challenge_actions_path(challenge_id: challenge_row.id, challenge_action: :complete), method: :post) %>
+    <% end %>
+    </td>
   </tr>
   <% end %>
 </table>

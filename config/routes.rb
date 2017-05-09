@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   end
 
   resources :challenges, only: %i(index show)
+  resources :challenge_actions, only: [:create]
 
   resources :events do 
       resources :event_registrations
