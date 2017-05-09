@@ -1,0 +1,35 @@
+<h2>Sent</h2>
+<table>
+  <tr>
+    <th>User</th>
+    <th>Category</th>
+    <th>Accepted?</th>
+    <th>Completed?</th>
+  </tr>
+  <% current_profile.challenges_sent.each do |challenge_row| %>
+  <tr>
+    <td><%= challenge_row.challenged %></td>
+    <td><%= challenge_row.category.name %></td>
+    <td><%= challenge_row.accepted? ? "&#x2714;" : '' %> </td>
+    <td><%= challenge_row.completed? ? "&#x2714;" : '' %> </td>
+  </tr>
+  <% end %>
+</table>
+
+<h2>Received</h2>
+<table>
+  <tr>
+    <th>User</th>
+    <th>Category</th>
+    <th>Accepted?</th>
+    <th>Completed?</th>
+  </tr>
+  <% current_profile.challenges_received.each do |challenge_row| %>
+  <tr>
+    <td><%= challenge_row.challenger %></td>
+    <td><%= challenge_row.category.name %></td>
+    <td><%= challenge_row.accepted? ? "&#x2714;" : '' %> </td>
+    <td><%= challenge_row.completed? ? "&#x2714;" : '' %> </td>
+  </tr>
+  <% end %>
+</table>

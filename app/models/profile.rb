@@ -17,7 +17,11 @@ class Profile < ApplicationRecord
   has_many :followers, through: :follows, source: :user
 
   has_many :challenges_sent, class_name: 'Challenge', foreign_key: 'challenger_id'
-  has_many :challenges_recieved, class_name: 'Challenge', foreign_key: 'challenged_id'
+  has_many :challenges_received, class_name: 'Challenge', foreign_key: 'challenged_id'
+
+  def to_s
+    self.name
+  end
 
   def has_no_custom_location?
     self.custom_location.blank?
