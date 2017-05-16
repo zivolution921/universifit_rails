@@ -1,5 +1,14 @@
+<h3>Friends</h3>
 <ul class="friend-list">
   <% @friends.each do |friend| %>
-    <li><%= friend.profile.name %></li>
+    <li><%= link_to friend.profile.name, friend.profile %></li>
+  <% end %>
+</ul>
+<hr>
+
+<h3>Followings</h3>
+<ul class="friend-list">
+  <% @followings.each do |profile| %>
+    <li><%= link_to profile.name, profile %></li>
   <% end %>
 </ul>

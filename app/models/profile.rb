@@ -1,4 +1,7 @@
 class Profile < ApplicationRecord
+
+  self.per_page = 5
+
   belongs_to :user
   belongs_to :location
   has_many :exercises

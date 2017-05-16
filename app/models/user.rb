@@ -11,6 +11,8 @@ class User < ApplicationRecord
 
   has_one :profile
 
+  has_many :notifications
+
   def password_changed?
     self.password.present?
   end
@@ -34,8 +36,12 @@ class User < ApplicationRecord
     event.profile == self.profile
   end
 
+  def friends?(profile)
+    friends.include?(profile.user)
+  end
+
   def friends
-    follows.select {|f| f.friends? }.map {|f| f.user }
+    follows.select {|f| f.friends? }.map {|f| f.profile.user }
   end
 
 end

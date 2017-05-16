@@ -12,6 +12,9 @@ class ChallengesController < ApplicationController
   def create
     category = ChallengeCategory.find(challenge_params[:category])
     if new_challenge(challenge_params.merge(category: category)).save
+      challenged.user.notifications.create!(
+        message: "You have been challenged by #{current_user.profile.name}!", 
+        notification_type: NotificationType.find_by(name: "Challenges"))
       redirect_to :dashboard
     else
       render :new

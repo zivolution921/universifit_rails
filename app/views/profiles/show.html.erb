@@ -14,6 +14,10 @@
         <input type=submit value="Follow me" class="btn btn-primary" />
       <%- end %>
     <% end %>
+
+    <% if current_user.friends?(@profile) %>
+      <%= link_to "Challenge me!", new_profile_challenge_path(@profile), class: 'btn btn-primary' %>
+    <% end %>
   </div>
 
   <div>

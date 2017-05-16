@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  notification_type: one
+  message: MyText
+  read_at: 2017-05-15 21:04:22
+  user: one
+
+two:
+  notification_type: two
+  message: MyText
+  read_at: 2017-05-15 21:04:22
+  user: two

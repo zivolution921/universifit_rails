@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
 
   def index 
-    @users = Profile.where("name ILIKE ?", params[:search_name]).paginate(:page => params[:page])
+    @users = Profile.where("name ILIKE ?", "%#{params[:q]}%").paginate(:page => params[:page])
   end
 
 end

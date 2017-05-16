@@ -14,8 +14,8 @@
       <tr>
         <td><%= challenge_row.challenged %></td>
         <td><%= challenge_row.category.name %></td>
-        <td><%= challenge_row.accepted? ? "&#x2714;" : '' %> </td>
-        <td><%= challenge_row.completed? ? "&#x2714;" : '' %> </td>
+        <td><%= challenge_row.accepted? ? raw("&#x2714;") : '' %> </td>
+        <td><%= challenge_row.completed? ? raw("&#x2714;") : '' %> </td>
       </tr>
     <% end %>
   </tbody>
@@ -48,7 +48,7 @@
         </td>
         <td><%if challenge_row.completed? %>
         &#x2714;
-        <% else %>
+        <% elsif challenge_row.accepted? %>
         <%= link_to("Complete", challenge_actions_path(challenge_id: challenge_row.id, challenge_action: :complete), method: :post) %>
         <% end %>
         </td>

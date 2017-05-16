@@ -1,8 +1,9 @@
-<%= will_paginate @users, renderer: BootstrapPagination::Rails %>
 
 <div class="row search-result col-md-8 col-md-offset-2">
+<%= will_paginate @users, renderer: BootstrapPagination::Rails %>
+
 <h3>Search Results</h3>
   <%= render partial: '/search/profile', collection: @users %>
+  <%= will_paginate @users, renderer: BootstrapPagination::Rails %>
 </div>
 
-<%= will_paginate @users, renderer: BootstrapPagination::Rails %>

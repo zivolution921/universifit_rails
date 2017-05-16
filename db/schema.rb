@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170508164322) do
+ActiveRecord::Schema.define(version: 20170516010422) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -161,6 +161,23 @@ ActiveRecord::Schema.define(version: 20170508164322) do
     t.string   "zip"
   end
 
+  create_table "notification_types", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.integer  "notification_type_id"
+    t.text     "message"
+    t.datetime "read_at"
+    t.integer  "user_id"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.index ["notification_type_id"], name: "index_notifications_on_notification_type_id", using: :btree
+    t.index ["user_id"], name: "index_notifications_on_user_id", using: :btree
+  end
+
   create_table "profiles", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "name"
@@ -207,6 +224,8 @@ ActiveRecord::Schema.define(version: 20170508164322) do
   add_foreign_key "exercises", "profiles"
   add_foreign_key "likes", "events"
   add_foreign_key "likes", "profiles"
+  add_foreign_key "notifications", "notification_types"
+  add_foreign_key "notifications", "users"
   add_foreign_key "profiles", "locations"
   add_foreign_key "profiles", "users"
   add_foreign_key "wall_posts", "profiles"
