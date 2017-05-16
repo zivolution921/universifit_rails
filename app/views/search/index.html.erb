@@ -4,6 +4,8 @@
 
 <h3>Search Results</h3>
   <%= render partial: '/search/profile', collection: @users %>
+  
+
   <%= will_paginate @users, renderer: BootstrapPagination::Rails %>
 </div>
 
