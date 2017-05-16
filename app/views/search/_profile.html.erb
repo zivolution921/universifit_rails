@@ -1,7 +1,8 @@
     <div class="well member">
       <div><%= link_to profile.name, profile %></div>
+      
       <% if following = current_user.following?(params[:id]) %>
-      You are following <%= @profile.name %>.<br>
+      You are following <%= profile.name %>.<br>
       <%= form_tag "/following/#{following.id}", method: 'delete' do |f| %>
 
       <input type=submit value="Unfollow" class="btn btn-default" />
