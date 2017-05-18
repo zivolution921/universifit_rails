@@ -30,3 +30,7 @@ a.btn-default {
   color: #aaa !important;
 
 }
+
+.btn-primary {
+  background-color: #006ef9 !important;
+}

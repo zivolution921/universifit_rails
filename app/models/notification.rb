@@ -9,6 +9,8 @@ class Notification < ApplicationRecord
   scope :unread, -> { where("read_at IS NULL") }
   scope :read,   -> { where("read_at IS NOT NULL") }
 
+  scope :challenges, -> { joins(:notification_type).where("notification_types.name = ?", :Challenges) }
+
   def unread?
     !read?
   end

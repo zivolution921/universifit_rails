@@ -37,6 +37,7 @@ class User < ApplicationRecord
   end
 
   def friends?(profile)
+    return [] if profile.blank?
     friends.include?(profile.user)
   end
 

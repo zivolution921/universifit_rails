@@ -17,16 +17,18 @@
         <!-- <li><span class="icon"><span class="i-comment fs20"></span></span> <span class="link">MESSAGES</span> <span class="indicator pull-right">8</span></li> -->
 
 
-        <li><span class="icon"><span class="i-lightning fs20"></span></span> <span class="link"><%= link_to 'CHALLENGES', challenges_path %></span> <span class="indicator pull-right">1</span></li>
+        <li><span class="icon"><span class="i-lightning fs20"></span></span> <span class="link"><%= link_to 'CHALLENGES', challenges_path %></span> 
+        <button type="button" class="pull-right btn btn-primary" data-toggle="modal" data-target="#challengeNotificationModal"><%= challenges_notification_count %></button></li>
+        <%= render 'challenges_modal' %>
 
 
-        <li><span class="icon"><span class="i-groups fs20"></span></span> <span class="link"><%= link_to 'EVENTS', events_path %></span> <span class="indicator pull-right">1</span></li>
+        <li><span class="icon"><span class="i-groups fs20"></span></span> <span class="link"><%= link_to 'EVENTS', events_path %></span> <span class="indicator pull-right"><%= events_notification_count %></span></li>
 
 
-        <li><span class="icon"><span class="i-cog fs20"></span></span> <span class="link">ACTIVITIES</span> <span class="indicator pull-right">1</span></li>
+        <li><span class="icon"><span class="i-cog fs20"></span></span> <span class="link">ACTIVITIES</span> <span class="indicator pull-right"><%= activities_notification_count %></span></li>
 
 
-        <li><span class="icon"><span class="i-user fs20"></span></span> <span class="link"><%= link_to 'FRIENDS', friends_path %></span> <span class="indicator pull-right">1</span></li>
+        <li><span class="icon"><span class="i-user fs20"></span></span> <span class="link"><%= link_to 'FRIENDS', friends_path %></span> <span class="indicator pull-right"><%= friends_notification_count %></span></li>
       </ul>
     </div>
 
