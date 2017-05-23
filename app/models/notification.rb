@@ -10,6 +10,8 @@ class Notification < ApplicationRecord
   scope :read,   -> { where("read_at IS NOT NULL") }
 
   scope :challenges, -> { joins(:notification_type).where("notification_types.name = ?", :Challenges) }
+  scope :follows,    -> { joins(:notification_type).where("notification_types.name = ?", :Follows) }
+  scope :friends,    -> { joins(:notification_type).where("notification_types.name = ?", :Friends) }
 
   def unread?
     !read?
@@ -21,5 +23,13 @@ class Notification < ApplicationRecord
 
   def read!
     update_attribute(:read_at, DateTime.now.utc)
+  end
+
+  def self.mark_all_read!(user)
+    where(user_id: user.id).unread.update_all(read_at: DateTime.now.utc)
+  end
+
+  def self.mark_read!(id)
+    find(id).update_attributes(read_at: DateTime.now.utc)
   end
 end

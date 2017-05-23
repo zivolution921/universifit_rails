@@ -12,6 +12,6 @@ end
 ChallengeCategory.find_or_create_by name: 'Running'
 ChallengeCategory.find_or_create_by name: 'Pushups'
 
-%w(Challenges Events Activities Friends).each do |name|
+%w(Follows Challenges Events Activities Friends).each do |name|
   NotificationType.find_or_create_by name: name
 end

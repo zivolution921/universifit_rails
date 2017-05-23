@@ -16,6 +16,10 @@ module NotificationHelper
     notification_count_by_type(:Friends)
   end
 
+  def follows_notification_count
+    notification_count_by_type(:Follows)
+  end
+
   private
 
   def notification_count_by_type(type)

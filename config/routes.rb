@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   resources :challenges, only: %i(index show)
   resources :challenge_actions, only: [:create]
+  resources :notification_actions, only: [:create]
 
   resources :events do 
       resources :event_registrations

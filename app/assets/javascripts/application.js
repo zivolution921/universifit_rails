@@ -21,3 +21,5 @@
 //= require strftime
 
 //= require_tree .
+//= require_self
+

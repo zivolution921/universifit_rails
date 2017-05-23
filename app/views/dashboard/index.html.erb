@@ -28,7 +28,8 @@
         <li><span class="icon"><span class="i-cog fs20"></span></span> <span class="link">ACTIVITIES</span> <span class="indicator pull-right"><%= activities_notification_count %></span></li>
 
 
-        <li><span class="icon"><span class="i-user fs20"></span></span> <span class="link"><%= link_to 'FRIENDS', friends_path %></span> <span class="indicator pull-right"><%= friends_notification_count %></span></li>
+        <li><span class="icon"><span class="i-user fs20"></span></span> <span class="link"><%= link_to 'FRIENDS', friends_path %></span> <button type="button" class="pull-right btn btn-primary" data-toggle="modal" data-target="#friendNotificationModal"><%= friends_notification_count + follows_notification_count %></button></li>
+        <%= render 'friends_modal' %></li>
       </ul>
     </div>
 

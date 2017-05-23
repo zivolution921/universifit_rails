@@ -7,4 +7,10 @@ $(document).ready(function() {
       }
       
     })
+
+    $(".referesh-when-clicked").on("click", function() { 
+    window.location.reload(true)
+  return true
+})
+
   })
