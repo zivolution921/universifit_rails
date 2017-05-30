@@ -9,15 +9,16 @@
       </tr>
     </thead>
     <tbody>
+
       <% @exercises.each do |exercise| %>
         <tr>
           <td><%= exercise.starts_at.strftime("%l:%M%p") %></td>
-          <td><%= link_to truncate(exercise.workout, length: 100), [current_user.profile, exercise] %></td>
+          <td><%= link_to truncate(exercise.workout, length: 100), [current_profile, exercise] %></td>
         </tr>
       <% end%>
     </tbody>
   </table>
 </div>
 <div class="col-md-6 col-xs-12">
-  <%= render partial: '/exercises/new' %>
+  <%= render partial: '/exercises_by_date/new' %>
 </div>

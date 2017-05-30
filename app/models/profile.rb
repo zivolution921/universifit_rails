@@ -12,6 +12,7 @@ class Profile < ApplicationRecord
 
   has_many :wall_posts
   has_many :comments
+  has_many :availabilities
 
   validates :location_id, presence: true, if: :has_no_custom_location?
   validates :custom_location, presence: true, if: :has_no_location_id?
@@ -21,6 +22,8 @@ class Profile < ApplicationRecord
 
   has_many :challenges_sent, class_name: 'Challenge', foreign_key: 'challenger_id'
   has_many :challenges_received, class_name: 'Challenge', foreign_key: 'challenged_id'
+
+  validates :zipcode, presence: true, if: :persisted?
 
   def to_s
     self.name

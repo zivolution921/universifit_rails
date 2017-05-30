@@ -4,7 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :availabilities
 
   has_many :follows, foreign_key: 'following_user_id'
   has_many :followings, through: :follows, source: :profile

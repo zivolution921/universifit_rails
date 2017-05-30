@@ -7,8 +7,11 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'registrations' }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
  
+  get 'partner_search', to: 'partner_search#index'
+
   resources :profiles do 
-    resources :exercises # Exercises url
+    resources :exercises_by_date
+    resources :exercises
     resources :challenges, only: %i(new create)
   end
 
@@ -27,6 +30,8 @@ Rails.application.routes.draw do
   resources :search, only: [:index]
   resources :wall_posts
   resources :comments
+
+
 
   authenticated :user do
     root 'dashboard#index', as: :dashboard # dashboard_url

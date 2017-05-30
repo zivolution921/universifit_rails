@@ -12,5 +12,8 @@ class Exercise < ApplicationRecord
   scope :last_seven_days, -> {where('starts_at > ?', 7.days.ago).order(starts_at: :desc) }
   #default_scope 
 
+  scope :persisted, -> { where('id IS NOT NULL') }
+
+
 
 end

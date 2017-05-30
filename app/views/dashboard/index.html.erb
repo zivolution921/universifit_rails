@@ -46,14 +46,16 @@
       <div class="small">* Click a day to see or
       create a new workout</div>
 
+      <%= link_to 'Find me a workout partner', partner_search_path %>
+
       <div data-value="<%= @date %>" id="start_date">
       </div>
       <%= render partial: '/shared/calendar', object: (@date.beginning_of_month.beginning_of_week(:sunday)..@date.end_of_month.end_of_week(:sunday)).to_a %>
 
+<%= link_to "All Exercizes", profile_exercises_path(current_profile), class: 'btn btn-default' %>
 
-      <div class="clear">
-      </div>
 
+<hr />
       <%= link_to "All Events", events_path, class: 'btn btn-default btn-upcoming-events' %>
       <%= link_to 'Add New Event', new_event_path, class: 'btn btn-default btn-create-event' %>
 

@@ -7,9 +7,13 @@
 
   <div class="field">
     <%= f.label "home gym" %><br />
-    <%= f.collection_select :location_id, Location.all, :id, :name, include_blank: "please select a gym or enter a custom one below" %> OR<br />
-    Custom home gym: <br>
+    I workout at: <br>
     <%= f.text_field :custom_location %>
+  </div>
+
+  <div class="field">
+    <%= f.label :zipcode %><br/>
+    <%= f.number_field :zipcode %>
   </div>
 
   <%= f.submit %>

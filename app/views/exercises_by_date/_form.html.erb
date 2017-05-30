@@ -1,6 +1,6 @@
 <div class='row'>
   <div class='col-md-12'>
-    <%= form_for([current_user.profile, @exercise], :html => {class: "form-horizontal", role: "form"}) do |f|%>
+    <%= form_tag(profile_exercises_by_date_index_path(current_profile, @exercise), {class: "form-horizontal", role: "form"}) do |f|%>
     <% if @exercise.errors.any? %>
       <div id="error_explanation">
         <h2>
@@ -17,54 +17,54 @@
 
 <div class="form-group">
         <div class="control-label col-md-2">
-          <%= f.label :starts_at, "Starts at" %>
+          <%= label_tag :starts_at, "Starts at" %>
         </div>
         <div class="col-md-10">
-          <%= f.text_field :starts_at, class: "datetimepicker form-control" %>
+          <%= text_field_tag :starts_at, @exercise.starts_at, class: "datetimepicker form-control" %>
         </div>
       </div>
 
       <div class="form-group">
         <div class="control-label col-md-2">
-         <%= f.label :duration_in_min, "Duration (min)" %>
+         <%= label_tag :duration_in_min, "Duration (min)" %>
         </div>
         <div class="col-md-10">
-         <%= f.number_field :duration_in_min, class: "form-control" %>
+         <%= number_field_tag :duration_in_min, @exercise.duration_in_min, class: "form-control" %>
         </div>
       </div>
 
       <div class="form-group">
         <div class="control-label col-md-2">
-         <%= f.label :location %>
+         <%= label_tag :location %>
         </div>
         <div class="col-md-10">
-         <%= f.text_field :location, class: "form-control" %>
+         <%= text_field_tag :location, @exercise.location, class: "form-control" %>
 
         </div>
       </div>
 
       <div class="form-group">
         <div class="control-label col-md-2">
-         <%= f.label :dedicated_to %>
+         <%= label_tag :dedicated_to %>
         </div>
         <div class="col-md-10">
-         <%= f.text_field :dedicated_to, class: "form-control" %>
+         <%= text_field_tag :dedicated_to, @exercise.dedicated_to, class: "form-control" %>
         </div>
       </div>
 
       <div class="form-group">
         <div class="control-label col-md-2">
-          <%= f.label :workout, "Workout Details" %><br>
+          <%= label_tag  :workout, "Workout Details" %><br>
         </div>
         <div class="col-md-10">
-          <%= f.text_area :workout, class: "form-control", rows: "10" %>
+          <%= text_field_tag :workout, @exercise.workout, class: "form-control", rows: "10" %>
         </div>
       </div>
 
       
       <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-          <%= f.submit class: "btn btn-primary btn-lg" %>
+          <%= submit_tag 'Save', class: "btn btn-primary btn-lg" %>
         </div>
       </div>
     <% end %>

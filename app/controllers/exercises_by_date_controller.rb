@@ -1,10 +1,11 @@
-class ExercisesController < ApplicationController
+class ExercisesByDateController < ApplicationController
   before_action :authenticate_user!
  
   def index
     @date = starts_at[:starts_at]
-    @exercise = current_user.profile.exercises.build(starts_at)
-    @exercises = current_user.profile.exercises.where(starts_at: starts_at[:starts_at].beginning_of_day..starts_at[:starts_at].end_of_day)
+    @exercise = current_profile.exercises.build(starts_at)
+    @exercises = current_profile.exercises.where(starts_at: starts_at[:starts_at].beginning_of_day..starts_at[:starts_at].end_of_day)
+    #current_profile.exercises.persisted.last_seven_days
   end
 
 
@@ -21,7 +22,7 @@ class ExercisesController < ApplicationController
   end
 
   def edit
-
+    @exercise = current_user.profile.exercises.find(params[:id])
   end
 
   def update
@@ -59,7 +60,7 @@ class ExercisesController < ApplicationController
   end
 
   def exercise
-    @exercise ||= current_user.profile.exercises.unscope(:where).find(params[:id])
+    @exercise ||= current_profile.exercises.unscope(:where).find(params[:id])
   end
 
 end

@@ -28,7 +28,7 @@
     <%- calendar.in_groups_of(7).each do |week| %>
       <tr>
       <%- week.each do |day| %>
-  <td data-date="<%= day.day %>" data-month="<%= day.month %>" data-year="<%= day.year %>" class="xdsoft_date"><div><%= link_to day.day, profile_exercises_path(current_user.profile.id, exercise: { starts_at: day }) %></div></td>
+  <td data-date="<%= day.day %>" data-month="<%= day.month %>" data-year="<%= day.year %>" class="xdsoft_date"><div><%= link_to day.day, profile_exercises_by_date_index_path(current_user.profile.id, exercise: { starts_at: day }) %></div></td>
 <% end %>
     </tr>
     <% end %>

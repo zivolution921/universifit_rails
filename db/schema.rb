@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170518015337) do
+ActiveRecord::Schema.define(version: 20170530002446) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,15 +47,14 @@ ActiveRecord::Schema.define(version: 20170518015337) do
   end
 
   create_table "availabilities", force: :cascade do |t|
-    t.integer  "user_id"
     t.datetime "starts_at"
     t.integer  "duration"
     t.integer  "location_id"
     t.string   "activity"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "profile_id"
     t.index ["location_id"], name: "index_availabilities_on_location_id", using: :btree
-    t.index ["user_id"], name: "index_availabilities_on_user_id", using: :btree
   end
 
   create_table "challenge_categories", force: :cascade do |t|
@@ -189,6 +188,7 @@ ActiveRecord::Schema.define(version: 20170518015337) do
     t.string   "zip_code"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "zipcode"
     t.index ["location_id"], name: "index_profiles_on_location_id", using: :btree
     t.index ["user_id"], name: "index_profiles_on_user_id", using: :btree
   end
@@ -220,7 +220,6 @@ ActiveRecord::Schema.define(version: 20170518015337) do
   end
 
   add_foreign_key "availabilities", "locations"
-  add_foreign_key "availabilities", "users"
   add_foreign_key "challenges", "challenge_categories"
   add_foreign_key "event_registrations", "events"
   add_foreign_key "exercises", "profiles"
