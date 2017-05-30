@@ -52,7 +52,7 @@
       </div>
       <%= render partial: '/shared/calendar', object: (@date.beginning_of_month.beginning_of_week(:sunday)..@date.end_of_month.end_of_week(:sunday)).to_a %>
 
-<%= link_to "All Exercizes", profile_exercises_path(current_profile), class: 'btn btn-default' %>
+<%= link_to "All Exercises", profile_exercises_path(current_profile), class: 'btn btn-default' %>
 
 
 <hr />
