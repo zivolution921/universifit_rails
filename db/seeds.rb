@@ -9,8 +9,13 @@ if !Admin.exists?(email: 'admin@example.com')
   Admin.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
 end
 
-ChallengeCategory.find_or_create_by name: 'Running'
-ChallengeCategory.find_or_create_by name: 'Pushups'
+%w(Running Pushups).each do |type|
+  ChallengeCategory.find_or_create_by name: type
+end
+
+%w(Running Pushups).each do |type|
+  ExerciseCategory.find_or_create_by name: type
+end
 
 %w(Follows Challenges Events Activities Friends).each do |name|
   NotificationType.find_or_create_by name: name

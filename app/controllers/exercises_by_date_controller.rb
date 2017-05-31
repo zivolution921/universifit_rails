@@ -4,9 +4,11 @@ class ExercisesByDateController < ApplicationController
   def index
     @date = starts_at[:starts_at]
     @exercise = current_profile.exercises.build(starts_at)
+
     @exercises = current_profile.exercises.where(starts_at: starts_at[:starts_at].beginning_of_day..starts_at[:starts_at].end_of_day)
     #current_profile.exercises.persisted.last_seven_days
   end
+
 
 
   def create
@@ -17,11 +19,11 @@ class ExercisesByDateController < ApplicationController
       redirect_to [current_user.profile, @exercise]
     else
       flash[:danger] = "Exercise has not been created"
-      render :new
+      render :index
     end
   end
 
-  def edit
+def edit
     @exercise = current_user.profile.exercises.find(params[:id])
   end
 
@@ -34,17 +36,7 @@ class ExercisesByDateController < ApplicationController
       render :edit
     end
   end
-
-  def show
-    exercise
-  end
-
-  def destroy
-    exercise.destroy
-    flash[:success] = "Exercise has been deleted"
-    redirect_to profile_exercises_path(current_user)
-  end
-
+  
   private
 
   def starts_at
@@ -55,7 +47,8 @@ class ExercisesByDateController < ApplicationController
     end
   end
 
-  def exercise_params
+
+def exercise_params
     params.require(:exercise).permit(:duration_in_min, :workout, :starts_at, :location, :dedicated_to)
   end
 

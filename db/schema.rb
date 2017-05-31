@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170530002446) do
+ActiveRecord::Schema.define(version: 20170531011127) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,17 +44,6 @@ ActiveRecord::Schema.define(version: 20170530002446) do
     t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_admins_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
-  end
-
-  create_table "availabilities", force: :cascade do |t|
-    t.datetime "starts_at"
-    t.integer  "duration"
-    t.integer  "location_id"
-    t.string   "activity"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.integer  "profile_id"
-    t.index ["location_id"], name: "index_availabilities_on_location_id", using: :btree
   end
 
   create_table "challenge_categories", force: :cascade do |t|
@@ -111,6 +100,12 @@ ActiveRecord::Schema.define(version: 20170530002446) do
     t.integer  "profile_id"
   end
 
+  create_table "exercise_categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "exercises", force: :cascade do |t|
     t.integer  "duration_in_min"
     t.text     "workout"
@@ -118,8 +113,10 @@ ActiveRecord::Schema.define(version: 20170530002446) do
     t.string   "location"
     t.string   "dedicated_to"
     t.datetime "starts_at"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.integer  "exercise_category_id"
+    t.index ["exercise_category_id"], name: "index_exercises_on_exercise_category_id", using: :btree
     t.index ["profile_id"], name: "index_exercises_on_profile_id", using: :btree
   end
 
@@ -219,7 +216,6 @@ ActiveRecord::Schema.define(version: 20170530002446) do
     t.index ["profile_id"], name: "index_wall_posts_on_profile_id", using: :btree
   end
 
-  add_foreign_key "availabilities", "locations"
   add_foreign_key "challenges", "challenge_categories"
   add_foreign_key "event_registrations", "events"
   add_foreign_key "exercises", "profiles"

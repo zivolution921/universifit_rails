@@ -1,6 +1,7 @@
 <tr>
-  <td><%= row.name %></td>
-  <td><%= row.location %></td>
+  <td><%= row.profile.name %></td>
+  <td><%= row.workout %></td>
+  <td><%= row.exercise_category && row.exercise_category.name %></td>
   <td><%= row.starts_at %></td>
-  <td><%= row.activity %></td>
+  <td><%= row.profile.zipcode %></td>
 </tr>

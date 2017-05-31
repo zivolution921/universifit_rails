@@ -1,10 +1,14 @@
 <h3>Workout partners near you...</h3>
+
+Insert form here
+
 <table class="table table-striped">
   <tr>
     <td>Name</td>
-    <td>Location</td>
+    <td>Workout</td>
+    <td>Type</td>
     <td>Date/Time</td>
-    <td>Activity Type</td>
+    <td>Zipcode</td>
   </tr>
   <%= render partial: 'partner_search/row', collection: @partners %>
 </table>

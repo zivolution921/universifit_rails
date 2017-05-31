@@ -12,7 +12,6 @@ class Profile < ApplicationRecord
 
   has_many :wall_posts
   has_many :comments
-  has_many :availabilities
 
   validates :location_id, presence: true, if: :has_no_custom_location?
   validates :custom_location, presence: true, if: :has_no_location_id?

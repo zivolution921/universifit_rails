@@ -73,3 +73,6 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'therubyracer', platforms: :ruby, github: 'cowboyd/therubyracer'
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
+
+gem 'browser-timezone-rails'
+gem 'glyphicons-rails', '~> 0.1.2'
