@@ -1,4 +1,4 @@
-<h2><%= @date.strftime("%b #{@date.day.ordinalize} %Y") %></h2>
+<h2><%= @date ? @date.strftime("%b #{@date.day.ordinalize} %Y") : '' %></h2>
 <div class="col-md-6 col-xs-12">
 
   <table class="table table-striped">
@@ -10,9 +10,9 @@
     </thead>
     <tbody>
 
-      <% @exercises.each do |exercise| %>
+      <% @exercises && @exercises.each do |exercise| %>
         <tr>
-          <td><%= exercise.starts_at.strftime("%l:%M%p") %></td>
+          <td><%= exercise.starts_at &&exercise.starts_at.strftime("%l:%M%p") %></td>
           <td><%= link_to truncate(exercise.workout, length: 100), [current_profile, exercise] %></td>
         </tr>
       <% end%>

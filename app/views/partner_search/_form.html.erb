@@ -1,0 +1,18 @@
+<%= form_tag partner_search_path, method: :get, class: 'form' do %>
+<div class='form-group col-md-3'>
+<%= label_tag :Zipcode %>
+  <%= text_field_tag :zipcode, '', class: 'form-control' %>
+</div>
+<div class='form-group col-md-3'>
+<%= label_tag "Workout type" %>
+  <%= select_tag :type, options_from_collection_for_select(ExerciseCategory.all, :id, :name), include_blank: true, class: 'form-control'  %>
+</div>
+<div class='form-group col-md-3'>
+<%= label_tag "Date" %>
+  <%= text_field_tag :date, '', class: 'form-control datepicker' %>
+</div>
+<div class='form-group col-md-3'>
+  <label for="submit">&nbsp;</label>
+  <%= submit_tag "Search", class: 'form-control' %>
+</div>
+<% end %>

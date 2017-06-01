@@ -49,7 +49,7 @@ def edit
 
 
 def exercise_params
-    params.require(:exercise).permit(:duration_in_min, :workout, :starts_at, :location, :dedicated_to)
+    params.require(:exercise).permit(:duration_in_min, :exercise_category_id, :workout, :starts_at, :location, :dedicated_to)
   end
 
   def exercise

@@ -7,7 +7,7 @@ class Exercise < ApplicationRecord
   validates :duration_in_min, numericality: {only_integer: true}
   validates :workout, presence: true
 
-  validates :exercise_category, presence: true
+  validates :exercise_category_id, presence: true
   
   validates :profile_id, presence: true
   # validates :user_id, presence: true

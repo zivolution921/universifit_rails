@@ -39,7 +39,7 @@
          <%= f.label :exercise_category, "Category" %>
         </div>
         <div class="col-md-10">
-         <%= select_tag :exercise_category, options_from_collection_for_select(ExerciseCategory.all, :id, :name), include_blank: true, class: "form-control" %>
+         <%= f.collection_select :exercise_category_id, ExerciseCategory.all, :id, :name, {}, class: "form-control" %>
         </div>
       </div>
 
