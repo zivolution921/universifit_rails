@@ -76,6 +76,14 @@ footer#page-footer {
   }
 }
 
+footer#universifit-footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   background: #006ef9;
+}
+
 div#wrapper {
   background: #fff;
   padding: 10px;
