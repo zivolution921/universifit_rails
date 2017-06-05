@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery-ui
 //= require jquery-ui/widgets/datepicker
+//= require jquery-ui/widget
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require raphael.min
@@ -23,6 +24,8 @@
 //= require js.cookie
 //= require jstz
 //= require browser_timezone_rails/set_time_zone
+
+//= require jquery.fileupload
 
 //= require_tree .
 //= require_self

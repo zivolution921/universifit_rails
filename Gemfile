@@ -76,3 +76,6 @@ gem "twitter-bootstrap-rails"
 
 gem 'browser-timezone-rails'
 gem 'glyphicons-rails', '~> 0.1.2'
+
+gem 'aws-sdk', '~> 2'
+gem 'dotenv-rails'

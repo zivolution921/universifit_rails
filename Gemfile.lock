@@ -79,6 +79,14 @@ GEM
     arbre (1.1.1)
       activesupport (>= 3.0.0)
     arel (7.1.4)
+    aws-sdk (2.9.31)
+      aws-sdk-resources (= 2.9.31)
+    aws-sdk-core (2.9.31)
+      aws-sigv4 (~> 1.0)
+      jmespath (~> 1.0)
+    aws-sdk-resources (2.9.31)
+      aws-sdk-core (= 2.9.31)
+    aws-sigv4 (1.0.0)
     bcrypt (3.1.11)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
@@ -112,6 +120,10 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
+    dotenv (2.2.1)
+    dotenv-rails (2.2.1)
+      dotenv (= 2.2.1)
+      railties (>= 3.2, < 5.2)
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
@@ -132,6 +144,7 @@ GEM
     jbuilder (2.6.3)
       activesupport (>= 3.0.0, < 5.2)
       multi_json (~> 1.2)
+    jmespath (1.3.1)
     jquery-rails (4.2.2)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -289,12 +302,14 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
+  aws-sdk (~> 2)
   better_errors
   binding_of_caller
   browser-timezone-rails
   byebug
   coffee-rails (~> 4.2)
   devise
+  dotenv-rails
   font-awesome-sass
   glyphicons-rails (~> 0.1.2)
   inherited_resources!
