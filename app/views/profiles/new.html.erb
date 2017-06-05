@@ -1,19 +1,27 @@
- <%= render '/layouts/form_errors', object: @profile %>
- <%= form_for @profile do |f| %>
- <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true %>
-  </div>
+<div class='row'>
+  <div class='col-md-12'>
+     <%= render '/layouts/form_errors', object: @profile %>
+     <%= form_for @profile do |f| %>
+     <div class="form-group">
+        <div class="control-label col-md-2">
+          <%= f.label :name %>
+          <%= f.text_field :name, autofocus: true %>
+        </div>
+      </div>
 
-  <div class="field">
-    <%= f.label "home gym" %><br />
-    <%= f.collection_select :location_id, Location.all, :id, :name, prompt: true %> OR<br />
-    Custom home gym: <br>
-    <%= f.text_field :custom_location %><br />
-    <%= f.label "zipcode" %>
-    <%= f.text_field :zipcode %>
-  </div>
 
-  <%= f.submit %>
+      <div class="form-group">
+        <div class="control-label col-md-2">
+          <%= f.label "home gym" %>
+          <%= f.collection_select :location_id, Location.all, :id, :name, prompt: true %> OR<br />
+          Custom home gym: <br>
+          <%= f.text_field :custom_location %>
+        </div>
+      </div>
+        <%= f.label "zipcode" %>
+        <%= f.text_field :zipcode %>
+      </div>
 
-<% end %>
+      <%= f.submit %>
+
+    <% end %>
