@@ -21,6 +21,7 @@ $(function() {
         progressBar.css('width', progress + '%')
       },
       start: function (e) {
+        console.log(form.data('form-data'))
         submitButton.prop('disabled', true);
 
         progressBar.

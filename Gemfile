@@ -79,3 +79,4 @@ gem 'glyphicons-rails', '~> 0.1.2'
 
 gem 'aws-sdk', '~> 2'
 gem 'dotenv-rails'
+gem "react-rails"

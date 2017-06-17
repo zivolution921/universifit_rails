@@ -41,7 +41,7 @@ class ProfilesController < ApplicationController
   end
 
   def profile_params
-    params.require(:profile).permit(:name, :custom_location, :location_id, :zipcode)
+    params.require(:profile).permit(:name, :custom_location, :location_id, :zipcode, :avatar_url)
   end
 
   def set_s3_direct_post
