@@ -7,6 +7,7 @@ class EditableAvatar extends React.Component {
     }
 
     this.handleChangeClick = this.handleChangeClick.bind(this)
+    this.handleAvatarSelect = this.handleAvatarSelect.bind(this)
   }
 
   handleChangeClick() {
@@ -15,13 +16,24 @@ class EditableAvatar extends React.Component {
     })
   }
 
-  handleAvatarSelect() {
-    console.log('Hell yeah')
-    let xhr = aios.someCallHereToS3
-    xhr.success( (resp) => {
-      this.setState({ image:url resp.data.avatarUrl }),
-      isEditing: false,
+  handleAvatarSelect(e) {
+    
+
+    const data = new FormData()
+    data.append('fileInput', e.target.value)
+    data.append('formData', this.props.presignedPost)
+    console.log(this.props.presignedPost)
+
+
+// we need to use the s3 sdk to get  the url encoded with the proper values.
+    let xhr = axios.post(this.props.presignedPost.url, data)
+    .then( response => {
+      console.log(response)
     })
+    //xhr.success( (resp) => {
+    //  this.setState({ image:url resp.data.avatarUrl }),
+    //  isEditing: false,
+    //})
   }
 
 

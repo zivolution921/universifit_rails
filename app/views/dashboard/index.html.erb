@@ -6,7 +6,8 @@
 
       <%= react_component("EditableAvatar", {
           defaultUrl: '/assets/default_avatar.png',
-          profile: current_profile
+          profile: current_profile,
+          presignedPost: @s3_direct_post
           }) %>
 
 

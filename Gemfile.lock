@@ -87,6 +87,7 @@ GEM
     aws-sdk-resources (2.9.31)
       aws-sdk-core (= 2.9.31)
     aws-sigv4 (1.0.0)
+    axios_rails (0.14.0)
     babel-source (5.8.35)
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
@@ -314,6 +315,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin!
   aws-sdk (~> 2)
+  axios_rails
   better_errors
   binding_of_caller
   browser-timezone-rails
@@ -350,4 +352,4 @@ RUBY VERSION
    ruby 2.4.0p0
 
 BUNDLED WITH
-   1.13.7
+   1.14.6
