@@ -1,13 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="sidebar col-lg-3 col-md-3 col-sm-2" style="background-color: #eee;">
-      <!--<div class="avatar"><img class="img-responsive" src="<%= current_profile.avatar_url || '/assets/default_avatar.png'%>">
-      </div>-->
+
 
       <%= react_component("EditableAvatar", {
           defaultUrl: '/assets/default_avatar.png',
-          profile: current_profile,
-          presignedPost: @s3_direct_post
+          profile: current_profile
           }) %>
 
 

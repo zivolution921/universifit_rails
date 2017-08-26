@@ -1,20 +1,18 @@
 class EditAvatarForm extends React.Component {
 
-constructor(props) {
-  super(props)
-  this.state = {
-    avatarUrl: ''
-  }
-}
- 
   render() {
     return (
       <div className="avatar">
-        <form encType="multipart/form-data">
-          <label htmlFor="avatarUrl">Avatar</label>
-          <input name='avatarUrl' type="file" value={this.state.avatarUrl} onChange={this.props.handleAvatarSelect}/>
-        </form>
+      <label htmlFor="avatarUrl">Avatar</label>
+      <input id='avatarUrl' name='avatarUrl' type="text"
+        value={this.props.avatarUrl}
+        onChange={this.props.handleAvatarChange}/>
+      {this.props.errors 
+        ? <div>{this.props.errors}</div>
+        : null
+      }
+      <button onClick={this.props.handleAvatarSave}>Save</button>
       </div>
-    )
+      )
   }
 }

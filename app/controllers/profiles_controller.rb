@@ -1,7 +1,5 @@
 class ProfilesController < ApplicationController
 
-  before_action :set_s3_direct_post, only: [:new, :edit, :create, :update]
-
   def new
     @profile = current_user.build_profile
   end
@@ -20,11 +18,17 @@ class ProfilesController < ApplicationController
   end
 
   def update
-    @profile = current_user.profile
-    if(@profile.update_attributes(profile_params))
-      redirect_to @profile
+    if(current_profile.update_attributes(profile_params))
+      respond_to do |format|
+        format.html { redirect_to current_profile }
+        format.json { render json: current_profile.to_json }
+      end
     else
-      render :edit
+      respond_to do |format|
+        format.html { render :edit }
+        format.json { render json: current_profile.to_json }
+      end
+      
     end
   end
 
@@ -44,7 +48,4 @@ class ProfilesController < ApplicationController
     params.require(:profile).permit(:name, :custom_location, :location_id, :zipcode, :avatar_url)
   end
 
-  def set_s3_direct_post
-    @s3_direct_post = S3_BUCKET.presigned_post(key: "uploads/#{SecureRandom.uuid}/${filename}", success_action_status: '201', acl: 'public-read')
-  end
 end
