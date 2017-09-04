@@ -6,7 +6,7 @@
     font-size: 1.2em;
     font-weight: 600;
     letter-spacing: 0.08em;
-    text-transform: uppercase;
+/*    text-transform: uppercase; */
     line-height: 90%;
 }
 
@@ -47,9 +47,11 @@ ul.sidebar-items li .indicator {
 
 }
 
+
 .sidebar .display-name {
     background-color: white;
     /* text-shadow: 0 0 black; */
     padding: 8px;
+     text-transform: uppercase;
     text-align: center;
 }

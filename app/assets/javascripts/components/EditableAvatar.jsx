@@ -23,8 +23,6 @@ class EditableAvatar extends React.Component {
   }
 
   handleAvatarSave() {
-    console.log(this.state)
-    console.log('clicked save')
     if(!this.validateImage(this.state.avatarUrl)) {
       this.setState({errors: ['The image url needs to be a valid image']})
       return
