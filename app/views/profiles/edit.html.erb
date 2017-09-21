@@ -1,10 +1,9 @@
  <%= render '/layouts/form_errors', object: @profile %>
-  <%= form_for(@profile, html: { class: 'directUpload', data: { 'form-data' => (@s3_direct_post.fields), 'url' => @s3_direct_post.url, 'host' => URI.parse(@s3_direct_post.url).host } }) do |f| %>
+  <%= form_for @profile  do |f| %>
  <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name, autofocus: true %>
-  </div>
-
+  </div>s
   <div class="field">
     <%= f.label "home gym" %><br />
     I workout at: <br>
