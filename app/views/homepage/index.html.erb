@@ -1,196 +1,198 @@
+<div class = "container" >
 <header id="home">
-     <div class="row banner">
-         <div id="a1" class="banner-text">
-          <div style="width:100%;max-width:740px;height:500px;margin:0 auto;position:relative;">
-            <div style="width:100%;height:40%;margin:0 auto;position:absolute;display:block;top:0;left:0;">
-              <h1 class="responsive-headline x1"><span class="lb" data-typer-targets="Find, Push, Meet">Find</span>
-               Connect <span data-typer-targets="Team, Grow, Join">Team</span></h1>
-            </div>
-            <a class="lg"></a>
+   <div class="row banner">
+       <div id="a1" class="banner-text">
+        <div style="width:100%;max-width:740px;height:500px;margin:0 auto;position:relative;">
+          <div style="width:100%;height:40%;margin:0 auto;position:absolute;display:block;top:0;left:0;">
+            <h1 class="responsive-headline x1"><span class="lb" data-typer-targets="Find, Push, Meet">Find</span>
+             Connect <span data-typer-targets="Team, Grow, Join">Team</span></h1>
           </div>
+          <a class="lg"></a>
+        </div>
 
-          <div style="width:100%;height:40%;margin:0 auto;position:absolute;display:block;bottom:0;left:0;">
-            <h1 class="responsive-headline x2">Motivate <span data-typer-targets="Inspire, Compete">Compete</span> <span class="lb" data-typer-targets="Challenge, Achieve">Challenge</span></h1>
-            <div class="swl"></div>
-            <BR/>
-              <%= link_to "Sign Up", new_user_registration_path, class: "button primary"
-               %>
-              <%= link_to "Log in", new_user_session_path, class: "button" %>
-                    <!--  <a href="#" class="button">Sign Up</a> -->
-          </div>
-       
-         </div>
-      </div>
-
-
-
-  
-
-   </header> <!-- Header End -->
+        <div style="width:100%;height:40%;margin:0 auto;position:absolute;display:block;bottom:0;left:0;">
+          <h1 class="responsive-headline x2">Motivate <span data-typer-targets="Inspire, Compete">Compete</span> <span class="lb" data-typer-targets="Challenge, Achieve">Challenge</span></h1>
+          <div class="swl"></div>
+          <BR/>
+            <%= link_to "Sign Up", new_user_registration_path, class: "button primary"
+             %>
+            <%= link_to "Log in", new_user_session_path, class: "button" %>
+                  <!--  <a href="#" class="button">Sign Up</a> -->
+        </div>
+     
+       </div>
+    </div>
 
 
 
-      <!-- About Section
-   ================================================== -->
-   <section id="two" class="whbg">
+
+
+ </header> <!-- Header End -->
+
+
+
+    <!-- About Section
+ ================================================== -->
+ <section id="two" class="whbg">
 <div style="width:100%;position:relative;display:block;margin-bottom: 64px;">
-    <%= image_tag "homepage/hline.png", style: "display:block;position:relative;margin:0 auto;" %>
+  <%= image_tag "homepage/hline.png", style: "display:block;position:relative;margin:0 auto;" %>
 
-      
+    
+  </div>
+
+    <div class="row">
+
+
+  <div id="shell" class="outline">
+
+   <div class="lq">
+    <div class="homebox">
+    <span class="bb">Trainers</span>
+
+       <p>Connect with a fitness professional, you can list your personal goals and Universifit will match you with 
+        trainers who are best qualified to assist you.
+       </p>
+
     </div>
+    
+    <%= image_tag "homepage/btrainer.png", { width: "128", height: "135", "data-xrange"=>"120", "data-yrange" => "120", id: "trainer"} %>
 
-      <div class="row">
+    <div class="ldots" data-xrange="80" data-yrange="40">
+      <div class="sk" style="float:right;"></div>
+        <BR/>
+      <div class="sk4" style="float:right;"></div>
+        <BR/>
+      <div class="sk2" style="float:right;"></div>
+    </div>
+   </div>
 
+   <div class="mq">
+    <div class="longhomebox">
+    <span class="bb">Events</span>
 
-    <div id="shell" class="outline">
+       <p>Connect with events, gym's, and group activities that are 
+        available in your area, you can even plan and share your own events.
 
-     <div class="lq">
-      <div class="homebox">
-      <span class="bb">Trainers</span>
-
-         <p>Connect with a fitness professional, you can list your personal goals and Universifit will match you with 
-          trainers who are best qualified to assist you.
-         </p>
-
-      </div>
-      
-      <%= image_tag "homepage/btrainer.png", { width: "128", height: "135", "data-xrange"=>"120", "data-yrange" => "120", id: "trainer"} %>
-
-      <div class="ldots" data-xrange="80" data-yrange="40">
-        <div class="sk" style="float:right;"></div>
-          <BR/>
-        <div class="sk4" style="float:right;"></div>
-          <BR/>
-        <div class="sk2" style="float:right;"></div>
-      </div>
-     </div>
-
-     <div class="mq">
-      <div class="longhomebox">
-      <span class="bb">Events</span>
-
-         <p>Connect with events, gym's, and group activities that are 
-          available in your area, you can even plan and share your own events.
-
-         </p>
-
-      </div>
-
-      <div id="turn" data-xrange="40" data-yrange="40">
-        <div class="sk"></div>
-        <div class="sk4"></div>
-        <div class="sk2"></div>
-              </div>
-        
-        <%= image_tag "homepage/bevent.png", { width: "160", height: "131", "data-xrange" => "160", "data-yrange" => "60", id:"event" } %>
-         
-     </div>
-
-     <div class="rq">
-      <div class="homebox">
-      <span class="bb">Partners</span>
-
-         <p>Connect with fitness partners and friends who share your fitness goals, schedule, or interest in activities.
-          Motivate or be motivated by someone local!
-         </p>
-
-      </div>
-
-        <%= image_tag "homepage/buser.png", { width: "48", height: "126", "data-xrange" => "120", "data-yrange" => "120", id: "user2" } %>
-         
-
-          <div class="rdots" data-xrange="80" data-yrange="40">
-        <div class="sk" style="float:left;"></div>
-          <BR/>
-        <div class="sk4" style="float:left;"></div>
-          <BR/>
-        <div class="sk2" style="float:left;"></div>
-              </div>    
-     </div>
-      <%= image_tag "homepage/buser.png", { width: "48", height: "126", "data-xrange" => "320", "data-yrange" => "80", id: "user" } %>
-  
-
+       </p>
 
     </div>
 
+    <div id="turn" data-xrange="40" data-yrange="40">
+      <div class="sk"></div>
+      <div class="sk4"></div>
+      <div class="sk2"></div>
+            </div>
+      
+      <%= image_tag "homepage/bevent.png", { width: "160", height: "131", "data-xrange" => "160", "data-yrange" => "60", id:"event" } %>
+       
+   </div>
+
+   <div class="rq">
+    <div class="homebox">
+    <span class="bb">Partners</span>
+
+       <p>Connect with fitness partners and friends who share your fitness goals, schedule, or interest in activities.
+        Motivate or be motivated by someone local!
+       </p>
+
+    </div>
+
+      <%= image_tag "homepage/buser.png", { width: "48", height: "126", "data-xrange" => "120", "data-yrange" => "120", id: "user2" } %>
+       
+
+        <div class="rdots" data-xrange="80" data-yrange="40">
+      <div class="sk" style="float:left;"></div>
+        <BR/>
+      <div class="sk4" style="float:left;"></div>
+        <BR/>
+      <div class="sk2" style="float:left;"></div>
+            </div>    
+   </div>
+    <%= image_tag "homepage/buser.png", { width: "48", height: "126", "data-xrange" => "320", "data-yrange" => "80", id: "user" } %>
 
 
-      </div>
 
-   </section> <!-- About Section End-->
+  </div>
+
+
+
+    </div>
+
+ </section> <!-- About Section End-->
 
 
 
 
 
 <!-- MAP Section
-   ================================================== -->
-   <section id="map">
+ ================================================== -->
+ <section id="map">
 
-      <div class="text-container">
+    <div class="text-container">
 
-         <div class="row">
-
-
-
-            <div class="ten columns flex-container">
-
-               <div class="flexslider">
-
-                  <ul class="slides">
-
-                     <li>
-                         <%= image_tag "homepage/mapgirl.png", class: "m-img" %>
-
-      <div class="qbox">
-      <span class="bc">Jessica G. - Trainer</span>
-         <p>Jessica G. is a Crossfit instructor, and is within 5 miles of you.
-         </p>
-      </div>
-
-                     </li> <!-- slide ends -->
-
-                     <li>
-                      <%= image_tag "homepage/mapguy.png", class: "m-img" %>
-
-      <div class="qbox">
-      <span class="bc">Henry F. - User</span>
-         <p>Looking for a jogging partner and is within 5 miles of you.
-         </p>
-      </div>
-                     </li> <!-- slide ends -->
-
-                  </ul>
-
-               </div> <!-- div.flexslider ends -->
-
-            </div> <!-- div.flex-container ends -->
-
-         </div> <!-- row ends -->
-
-       </div>  <!-- text-container ends -->
-
-   </section> <!-- map Section End-->
+       <div class="row">
 
 
 
-   <!-- footer
-   ================================================== -->
-   <footer>
+          <div class="ten columns flex-container">
 
-      <div class="row">
+             <div class="flexslider">
 
-         <div class="twelve columns">
+                <ul class="slides">
+
+                   <li>
+                       <%= image_tag "homepage/mapgirl.png", class: "m-img" %>
+
+    <div class="qbox">
+    <span class="bc">Jessica G. - Trainer</span>
+       <p>Jessica G. is a Crossfit instructor, and is within 5 miles of you.
+       </p>
+    </div>
+
+                   </li> <!-- slide ends -->
+
+                   <li>
+                    <%= image_tag "homepage/mapguy.png", class: "m-img" %>
+
+    <div class="qbox">
+    <span class="bc">Henry F. - User</span>
+       <p>Looking for a jogging partner and is within 5 miles of you.
+       </p>
+    </div>
+                   </li> <!-- slide ends -->
+
+                </ul>
+
+             </div> <!-- div.flexslider ends -->
+
+          </div> <!-- div.flex-container ends -->
+
+       </div> <!-- row ends -->
+
+     </div>  <!-- text-container ends -->
+
+ </section> <!-- map Section End-->
 
 
 
-            <ul class="copyright">
-               <li>&copy; Copyright 2017 Universifit</li>
-            </ul>
+ <!-- footer
+ ================================================== -->
+ <footer>
 
-         </div>
+    <div class="row">
+
+       <div class="twelve columns">
 
 
-      </div>
 
-   </footer> <!-- Footer End-->
+          <ul class="copyright">
+             <li>&copy; Copyright 2017 Universifit</li>
+          </ul>
+
+       </div>
+
+
+    </div>
+
+ </footer> <!-- Footer End-->
+ </div>
