@@ -1,7 +1,7 @@
     <div class="well member">
       <div><%= link_to profile.name, profile %></div>
       
-      <% if following = current_user.following?(params[:id]) %>
+      <% if following = current_user.following?(profile.id) %>
       You are following <%= profile.name %>.<br>
       <%= form_tag "/following/#{following.id}", method: 'delete' do |f| %>
 
@@ -10,7 +10,7 @@
     <% else %>
       <%= form_tag "/following" do |f| %>
         <input type=hidden id="following_user_id" name="following_user_id" value="<%= current_user.id %>" />
-        <input type=hidden id="followed_profile_id" name="followed_profile_id" value="<%= params[:id] %>" />
+        <input type=hidden id="followed_profile_id" name="followed_profile_id" value="<%= profile.id %>" />
         <input type=submit value="Follow me" class="btn btn-primary" />
       <%- end %>
     <% end %>
