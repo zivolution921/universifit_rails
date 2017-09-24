@@ -4,17 +4,19 @@
     <% if following = current_user.following?(params[:id]) %>
       You are following <%= @profile.name %>.<br>
       <%= form_tag "/following/#{following.id}", method: 'delete' do |f| %>
-
-      <input type=submit value="Unfollow" class="btn btn-default" />
+      <% if current_user.id != @profile.user_id %>
+        <input type=submit value="Unfollow" class="btn btn-default" />
       <%- end %>
+    <% end %>
     <% else %>
       <%= form_tag "/following" do |f| %>
         <input type=hidden id="following_user_id" name="following_user_id" value="<%= current_user.id %>" />
         <input type=hidden id="followed_profile_id" name="followed_profile_id" value="<%= params[:id] %>" />
-        <input type=submit value="Follow me" class="btn btn-primary" />
+        <% if current_user.id != @profile.id %>
+          <input type=submit value="Follow me" class="btn btn-primary" />
+        <% end %>
       <%- end %>
     <% end %>
-
     <% if current_user.friends?(@profile) %>
       <%= link_to "Challenge me!", new_profile_challenge_path(@profile), class: 'btn btn-primary' %>
     <% end %>
@@ -23,11 +25,9 @@
   <div>
     <%= @profile.name %>
   </div>
-
   <div>
     <%= @profile.location_name_or_custom_location %>
   </div>
-
 </div>
 
 <div class="col-md-10 col-md-offset-1">
