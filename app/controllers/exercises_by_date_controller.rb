@@ -27,10 +27,15 @@ def edit
     @exercise = current_user.profile.exercises.find(params[:id])
   end
 
+def destroy
+  @exercise = current_user.profile.exercises.find(params[:id])
+  @exercise.destroy
+  redirect_to profile_exercises_path
+end
   def update
     if exercise.update(exercise_params)
       flash[:success] = "Exercise has been updated"
-      redirect_to [current_user.profile, exercise]
+      #redirect_to profile_exercises_path
     else
       flash[:danger] = "Exercise has not been updated"
       render :edit

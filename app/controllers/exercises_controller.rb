@@ -9,6 +9,18 @@ class ExercisesController < ApplicationController
     exercise
   end
 
+def edit
+end
+
+def update
+  if exercise.update(exercise_params)
+    flash[:success] = "Exercise has been updated"
+    redirect_to profile_exercises_path
+  else
+    flash[:danger] = "Exercise has not been updated"
+    render :edit
+  end
+end
 
   private
 

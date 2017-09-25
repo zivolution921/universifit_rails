@@ -1,6 +1,6 @@
 <div class='row'>
   <div class='col-md-12'>
-    <%= form_for([current_profile, @exercise], url: profile_exercises_by_date_index_path(current_profile), html: {
+    <%= form_for([current_profile, @exercise], html: {
       class: "form-horizontal" }) do |f|%>
     <% if @exercise.errors.any? %>
       <div id="error_explanation">
@@ -69,9 +69,7 @@
         <div class="col-md-10">
           <%= f.text_area :workout, class: "form-control", rows: "10" %>
         </div>
-      </div>
-
-      
+      </div>x
       <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
           <%= f.submit class: "btn btn-primary btn-lg" %>

@@ -36,5 +36,5 @@
 
 
 
-          <%= link_to "Edit", [:edit, current_user.profile, @exercise] %>
-          <%= link_to "Destroy", [current_user.profile, @exercise], method: :delete, data: { confirm: "Are you sure?" } %> 
+          <%= link_to "Edit", edit_profile_exercises_by_date_path(current_user.profile,@exercise) %>
+          <%= link_to "Destroy", profile_exercises_by_date_path(current_user.profile, @exercise), method: :delete, data: { confirm: "Are you sure?" } %> 
