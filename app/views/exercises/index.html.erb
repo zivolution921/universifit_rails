@@ -12,6 +12,7 @@
     </thead>
     <tbody>
 
+<% if @exercises.present? %>
       <% @exercises.each do |exercise| %>
         <tr>
           <td><%= exercise.starts_at.strftime("%c") %></td>
@@ -23,3 +24,4 @@
   </table>
 </div>
 
+<% end %>
