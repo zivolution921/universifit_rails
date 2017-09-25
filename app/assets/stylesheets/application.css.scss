@@ -33,6 +33,18 @@ a.btn-default {
 
 }
 
+.wrapper 
+  {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -60px;
+  }
+.footer, .push 
+  {
+    height: 60px; /* .push must be the same height as .footer */
+  }
+
 .btn-primary {
   background-color: #006ef9 !important;
 }

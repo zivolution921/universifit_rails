@@ -17,7 +17,7 @@
 
   </head>
   <body>
-  
+<div class = "wrapper">
     <%= render '/layouts/navbar' %>
     <%= bootstrap_flash %>
     <section id="content">
@@ -28,8 +28,10 @@
         <input type='hidden' id="current_user_id" value="<%= current_user && current_user.id %>" />
         </div>
       </div>
-    </section>     
-          
+    </section>
+    <div class = "push">
+    </div>
+ </div>         
     <%= render 'layouts/footer' %>
   </body>
 </html>
