@@ -1453,6 +1453,7 @@ div.rdots {
         opacity: 0;
     }
 }
+@media only screen and (max-width: 1500px) {
 .lg {
     display: block;
     background: url(/assets/homepage/normlogo.png) no-repeat;
@@ -1465,6 +1466,127 @@ div.rdots {
     -ms-animation: fadein 6s;
     -o-animation: fadein 6s;
     animation: fadein 6s;
+}
+}
+@media only screen and (max-width: 876px) {
+
+    /* header styles
+   ------------------------------------------------------------------ */
+   .lg {
+    display: block;
+    background: url(/assets/homepage/normlogo.png) no-repeat;
+    width: 100%;
+    background-size: 649px;
+    background-position: 101% -8%;
+    height: 100%;
+    max-height: 500px;
+    max-width: 740px;
+    -webkit-animation: fadein 6s;
+    -moz-animation: fadein 6s;
+    -ms-animation: fadein 6s;
+    -o-animation: fadein 6s;
+    animation: fadein 6s;
+}
+}
+@media only screen and (max-width: 774px) {
+
+    /* header styles
+   ------------------------------------------------------------------ */
+   .lg {
+    display: block;
+    background: url(/assets/homepage/normlogo.png) no-repeat;
+    width: 100%;
+    background-size: 547px;
+    background-position: 101% -37%;
+    height: 100%;
+    max-height: 500px;
+    max-width: 740px;
+    -webkit-animation: fadein 6s;
+    -moz-animation: fadein 6s;
+    -ms-animation: fadein 6s;
+    -o-animation: fadein 6s;
+    animation: fadein 6s;
+}
+}
+@media only screen and (max-width: 648px) {
+
+    /* header styles
+   ------------------------------------------------------------------ */
+   .lg {
+    display: block;
+    background: url(/assets/homepage/normlogo.png) no-repeat;
+    width: 100%;
+    background-size: 475px;
+    background-position: 37% -65%;
+    height: 100%;
+    max-height: 500px;
+    max-width: 740px;
+    -webkit-animation: fadein 6s;
+    -moz-animation: fadein 6s;
+    -ms-animation: fadein 6s;
+    -o-animation: fadein 6s;
+    animation: fadein 6s;
+}
+}
+@media only screen and (max-width: 586px) {
+
+    /* header styles
+   ------------------------------------------------------------------ */
+   .lg {
+    display: block;
+    background: url(/assets/homepage/normlogo.png) no-repeat;
+    width: 100%;
+    background-size: 343px;
+    background-position: 37% 337%;
+    height: 100%;
+    max-height: 500px;
+    max-width: 740px;
+    -webkit-animation: fadein 6s;
+    -moz-animation: fadein 6s;
+    -ms-animation: fadein 6s;
+    -o-animation: fadein 6s;
+    animation: fadein 6s;
+}
+}
+@media only screen and (max-width: 424px) {
+
+    /* header styles
+   ------------------------------------------------------------------ */
+   .lg {
+    display: block;
+    background: url(/assets/homepage/normlogo.png) no-repeat;
+    width: 100%;
+    background-size: 323px;
+    background-position: 55% 197%;
+    height: 100%;
+    max-height: 500px;
+    max-width: 740px;
+    -webkit-animation: fadein 6s;
+    -moz-animation: fadein 6s;
+    -ms-animation: fadein 6s;
+    -o-animation: fadein 6s;
+    animation: fadein 6s;
+}
+}
+@media only screen and (max-width: 384px) {
+
+    /* header styles
+   ------------------------------------------------------------------ */
+   .lg {
+    display: block;
+    background: url(/assets/homepage/normlogo.png) no-repeat;
+    width: 100%;
+    background-size: 289px;
+    background-position: 55% 132%;
+    height: 100%;
+    max-height: 500px;
+    max-width: 740px;
+    -webkit-animation: fadein 6s;
+    -moz-animation: fadein 6s;
+    -ms-animation: fadein 6s;
+    -o-animation: fadein 6s;
+    animation: fadein 6s;
+}
 }
 .lb {
     color: #D3ECF3 !important;
@@ -1541,6 +1663,20 @@ header .scrolldown a {
 #home .button.primary {
   background-color: green;
 }
+@media only screen and (max-width: 1240px)
+{
+    .bb {
+    color: #0A60DC;
+    font: 28px/0.7em "Oswald", sans-serif !important;
+    height: 128px;
+    letter-spacing: 8px;
+    margin: 0 auto 18px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+}
 #two {
     padding-top: 96px;
     position: relative;
@@ -1561,12 +1697,128 @@ header .scrolldown a {
     -o-transition: all 0.3s;
     -moz-transition: all 0.3s;
 }
-.rq:hover .bb {
-    color: #F49F22;
 }
-.bb {
+
+@media only screen and (max-width: 969px)
+{
+#two {
+    padding-top: 96px;
+    position: relative;
+    overflow: hidden;
+}
+#two p {
+    color: #7a7a7a;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    margin-top: 4px;
+    text-transform: none;
+    padding-bottom: 16px;
+    border-bottom: 4px solid #ED6F70;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+}
+}
+@media only screen and (max-width: 927px)
+{
+#two {
+    padding-top: 96px;
+    position: relative;
+    overflow: hidden;
+}
+#two p {
+    color: #7a7a7a;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    margin-top: 4px;
+    text-transform: none;
+    padding-bottom: 16px;
+    border-bottom: 4px solid #ED6F70;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+}
+}
+@media only screen and (max-width: 885px)
+{
+#two {
+    padding-top: 96px;
+    position: relative;
+    overflow: hidden;
+}
+#two p {
+    color: #7a7a7a;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    margin-top: 4px;
+    text-transform: none;
+    padding-bottom: 16px;
+    border-bottom: 4px solid #ED6F70;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+}
+}
+@media only screen and (max-width: 861px)
+{
+#two {
+    padding-top: 96px;
+    position: relative;
+    overflow: hidden;
+}
+#two p {
+    color: #7a7a7a;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    margin-top: 4px;
+    text-transform: none;
+    padding-bottom: 16px;
+    border-bottom: 4px solid #ED6F70;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+}
+}
+@media only screen and (max-width: 800px)
+{
+#two {
+    padding-top: 96px;
+    position: relative;
+    overflow: hidden;
+}
+#two p {
+    color: #7a7a7a;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    margin-top: 4px;
+    text-transform: none;
+    padding-bottom: 16px;
+    border-bottom: 4px solid #ED6F70;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+}
+}
+@media only screen and (max-width: 768px)
+{
+    .bb {
     color: #0A60DC;
-    font: 28px/0.7em "Oswald", sans-serif !important;
+    font: 14px/0.7em "Oswald", sans-serif !important;
     height: 128px;
     letter-spacing: 8px;
     margin: 0 auto 18px;
@@ -1575,6 +1827,114 @@ header .scrolldown a {
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     -moz-transition: all 0.3s;
+}
+#two {
+    padding-top: 96px;
+    position: relative;
+    overflow: hidden;
+}
+#two p {
+    color: #7a7a7a;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 5px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    margin-top: 4px;
+    text-transform: none;
+    padding-bottom: 16px;
+    border-bottom: 4px solid #ED6F70;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+}
+}
+@media only screen and (max-width: 447px)
+{
+    .bb {
+    color: #0A60DC;
+    font: 12px/0.7em "Oswald", sans-serif !important;
+    height: 128px;
+    letter-spacing: 8px;
+    margin: 0 auto 18px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+}
+#two {
+    padding-top: 96px;
+    position: relative;
+    overflow: hidden;
+}
+#two p {
+    color: #7a7a7a;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 4px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    margin-top: 4px;
+    text-transform: none;
+    padding-bottom: 16px;
+    border-bottom: 4px solid #ED6F70;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+}
+}
+@media only screen and (max-width: 408px)
+{
+    .bb {
+    color: #0A60DC;
+    font: 8px/0.7em "Oswald", sans-serif !important;
+    height: 128px;
+    letter-spacing: 8px;
+    margin: 0 auto 18px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+}
+   img#trainer {
+    position: absolute;
+    top: 280px;
+    left: 8%;
+    z-index: 6;
+    opacity: .5;
+}
+    img#user2 {
+    position: absolute;
+    top: 280px;
+    right: 27%;
+    z-index: 6;
+    opacity: .5;
+}
+#two {
+    padding-top: 96px;
+    position: relative;
+    overflow: hidden;
+}
+#two p {
+    color: #7a7a7a;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 3px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    margin-top: 4px;
+    text-transform: none;
+    padding-bottom: 16px;
+    border-bottom: 4px solid #ED6F70;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+}
+}
+.rq:hover .bb {
+    color: #F49F22;
 }
 
 .x1 span, .x2 span {

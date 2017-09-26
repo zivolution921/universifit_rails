@@ -14,13 +14,64 @@
     /* header styles
    ------------------------------------------------------------------ */
    header .banner-text h1 {
-      font: 80px/1.1em 'opensans-bold', sans-serif;
+      font: 40px/1.1em 'opensans-bold', sans-serif !important;
       letter-spacing: -1px;
       margin: 0 auto 12px auto;
-   }
+}
+}
+@media only screen and (max-width: 713px) {
+
+    /* header styles
+   ------------------------------------------------------------------ */
+   header .banner-text h1 {
+      font: 35px/1.1em 'opensans-bold', sans-serif !important;
+      letter-spacing: -1px;
+      margin: 0 auto 12px auto;
+}
+}
+@media only screen and (max-width: 648px) {
+
+    /* header styles
+   ------------------------------------------------------------------ */
+   header .banner-text h1 {
+      font: 30px/1.1em 'opensans-bold', sans-serif !important;
+      letter-spacing: -1px;
+      margin: 0 auto 12px auto;
+   
 
 }
+}
+@media only screen and (max-width: 562px) {
 
+    /* header styles
+   ------------------------------------------------------------------ */
+   header .banner-text h1 {
+      font: 25px/1.1em 'opensans-bold', sans-serif !important;
+      letter-spacing: -1px;
+      margin: 0 auto 12px auto;
+}
+}
+@media only screen and (max-width:488 px) {
+
+    /* header styles
+   ------------------------------------------------------------------ */
+   header .banner-text h1 {
+      font: 20x/1.1em 'opensans-bold', sans-serif !important;
+      letter-spacing: -1px;
+      margin: 0 auto 12px auto;
+}
+}
+
+@media only screen and (max-width: 441px) {
+
+    /* header styles
+   ------------------------------------------------------------------ */
+   header .banner-text h1 {
+      font: 15px/1.1em 'opensans-bold', sans-serif !important;
+      letter-spacing: -1px;
+      margin: 0 auto 12px auto;
+}
+}
 /* screenwidth less than 900px
 --------------------------------------------------------------------- */
 @media only screen and (max-width: 900px) {
@@ -29,7 +80,7 @@
    ------------------------------------------------------------------ */
    header .banner { padding-bottom: 12px; }
    header .banner-text h1 {
-      font: 78px/1.1em 'opensans-bold', sans-serif;
+      font: 49px/1.1em 'opensans-bold', sans-serif;
       letter-spacing: -1px;      
    }
    header .banner-text h3 {
