@@ -1,7 +1,9 @@
-<tr>
-  <td><%= row.profile.name %></td>
-  <td><%= row.workout %></td>
-  <td><%= row.exercise_category && row.exercise_category.name %></td>
-  <td><%= row.starts_at %></td>
-  <td><%= row.profile.zipcode %></td>
-</tr>
+<% if row.profile.id != current_user.profile.id %>
+  <tr>
+    <td><%= row.profile.name %></td>
+    <td><%= row.workout %></td>
+    <td><%= row.exercise_category && row.exercise_category.name %></td>
+    <td><%= row.starts_at %></td>
+    <td><%= row.profile.zipcode %></td>
+  </tr>
+<% end %>
