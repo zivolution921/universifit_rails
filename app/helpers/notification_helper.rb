@@ -5,6 +5,7 @@ module NotificationHelper
   end
 
   def events_notification_count
+     #current_user.profile.events.count
     notification_count_by_type(:Events)
   end
 

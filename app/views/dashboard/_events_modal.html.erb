@@ -1,0 +1,23 @@
+<div class="modal fade" id="friendNotificationModal" tabindex="-1" role="dialog" aria-labelledby="friendNotificationModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="friendNotificationModalLabel">Event</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <div>
+      <%= link_to "Mark all read", notification_actions_path(notification_action: :read_all), method: :post, class: "referesh-when-clicked", remote: true %>
+      </div>
+        <% [*current_user.notifications.unread.friends, *current_user.notifications.unread.follows].each do |notification| %>
+          <div><%= raw notification.message %> <%= link_to 'X', notification_actions_path(notification_id: notification.id, notification_action: :mark_read), class: 'pull-right referesh-when-clicked', remote: true, method: :post %></div>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

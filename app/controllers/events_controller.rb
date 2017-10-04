@@ -28,6 +28,7 @@ class EventsController < ApplicationController
 
   def new
     @event = current_user.profile.events.build
+        #current_user.notifications.create( notification_type_id: @event.id, )
   end
 
   def create
@@ -38,6 +39,14 @@ class EventsController < ApplicationController
       redirect_to @event
     else
       render :new
+    end
+    @friends = current_user.friends;
+    @friends.each do |friend|
+      Notification.create(
+          notification_type: NotificationType.find_by(name: "Events"),
+          user_id: friend.id,
+          message: "#{ ActionController::Base.helpers.link_to @event.name, event_path(@event)} a new event has been created."
+        )
     end
   end
 

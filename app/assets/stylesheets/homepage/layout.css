@@ -1456,7 +1456,7 @@ div.rdots {
 @media only screen and (max-width: 1500px) {
 .lg {
     display: block;
-    background: url(/assets/homepage/normlogo.png) no-repeat;
+    background: url(/assets/logo.png) no-repeat;
     width: 100%;
     height: 100%;
     max-height: 500px;
@@ -1466,6 +1466,7 @@ div.rdots {
     -ms-animation: fadein 6s;
     -o-animation: fadein 6s;
     animation: fadein 6s;
+    background-position: 49% 50%;
 }
 }
 @media only screen and (max-width: 876px) {
@@ -1474,10 +1475,10 @@ div.rdots {
    ------------------------------------------------------------------ */
    .lg {
     display: block;
-    background: url(/assets/homepage/normlogo.png) no-repeat;
+    background: url(/assets/logo.png) no-repeat;
     width: 100%;
     background-size: 649px;
-    background-position: 101% -8%;
+    background-position: 45% 50%;
     height: 100%;
     max-height: 500px;
     max-width: 740px;
@@ -1494,10 +1495,10 @@ div.rdots {
    ------------------------------------------------------------------ */
    .lg {
     display: block;
-    background: url(/assets/homepage/normlogo.png) no-repeat;
+    background: url(/assets/logo.png) no-repeat;
     width: 100%;
     background-size: 547px;
-    background-position: 101% -37%;
+    background-position: 40% 50%;
     height: 100%;
     max-height: 500px;
     max-width: 740px;
@@ -1514,10 +1515,10 @@ div.rdots {
    ------------------------------------------------------------------ */
    .lg {
     display: block;
-    background: url(/assets/homepage/normlogo.png) no-repeat;
+    background: url(/assets/logo.png) no-repeat;
     width: 100%;
     background-size: 475px;
-    background-position: 37% -65%;
+    background-position: 35% 50%;
     height: 100%;
     max-height: 500px;
     max-width: 740px;
@@ -1534,10 +1535,10 @@ div.rdots {
    ------------------------------------------------------------------ */
    .lg {
     display: block;
-    background: url(/assets/homepage/normlogo.png) no-repeat;
+    background: url(/assets/logo.png) no-repeat;
     width: 100%;
-    background-size: 343px;
-    background-position: 37% 337%;
+    background-size: 350px;
+    background-position: 45% 50%;
     height: 100%;
     max-height: 500px;
     max-width: 740px;
@@ -1554,10 +1555,10 @@ div.rdots {
    ------------------------------------------------------------------ */
    .lg {
     display: block;
-    background: url(/assets/homepage/normlogo.png) no-repeat;
+    background: url(/assets/logo.png) no-repeat;
     width: 100%;
-    background-size: 323px;
-    background-position: 55% 197%;
+    background-size: 275px;
+    background-position: 45% 50%;
     height: 100%;
     max-height: 500px;
     max-width: 740px;
@@ -1574,10 +1575,10 @@ div.rdots {
    ------------------------------------------------------------------ */
    .lg {
     display: block;
-    background: url(/assets/homepage/normlogo.png) no-repeat;
+    background: url(/assets/logo.png) no-repeat;
     width: 100%;
-    background-size: 289px;
-    background-position: 55% 132%;
+    background-size: 215px;
+    background-position: 45% 50%;
     height: 100%;
     max-height: 500px;
     max-width: 740px;
