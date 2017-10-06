@@ -416,12 +416,12 @@ class Morris.Grid extends Morris.EventEmitter
 Morris.parseDate = (date) ->
   if typeof date is 'number'
     return date
-  m = date.match /^(\d+) Q(\d)$/
-  n = date.match /^(\d+)-(\d+)$/
-  o = date.match /^(\d+)-(\d+)-(\d+)$/
-  p = date.match /^(\d+) W(\d+)$/
-  q = date.match /^(\d+)-(\d+)-(\d+)[ T](\d+):(\d+)(Z|([+-])(\d\d):?(\d\d))?$/
-  r = date.match /^(\d+)-(\d+)-(\d+)[ T](\d+):(\d+):(\d+(\.\d+)?)(Z|([+-])(\d\d):?(\d\d))?$/
+    #m = date.match /^(\d+) Q(\d)$/
+    #n = date.match /^(\d+)-(\d+)$/
+    #o = date.match /^(\d+)-(\d+)-(\d+)$/
+    #p = date.match /^(\d+) W(\d+)$/
+    #q = date.match /^(\d+)-(\d+)-(\d+)[ T](\d+):(\d+)(Z|([+-])(\d\d):?(\d\d))?$/
+    #r = date.match /^(\d+)-(\d+)-(\d+)[ T](\d+):(\d+):(\d+(\.\d+)?)(Z|([+-])(\d\d):?(\d\d))?$/
   if m
     new Date(
       parseInt(m[1], 10),

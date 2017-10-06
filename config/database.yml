@@ -25,6 +25,9 @@ default: &default
 development:
   <<: *default
   database: universifit_rails_development
+  username: postgres
+  password: 5512
+  
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
