@@ -138,6 +138,7 @@ GEM
     formtastic (3.1.5)
       actionpack (>= 3.2.13)
     formtastic_i18n (0.6.0)
+    geocoder (1.4.4)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     glyphicons-rails (0.1.2)
@@ -321,6 +322,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   font-awesome-sass
+  geocoder
   glyphicons-rails (~> 0.1.2)
   inherited_resources!
   jbuilder (~> 2.5)
@@ -348,4 +350,4 @@ RUBY VERSION
    ruby 2.4.0p0
 
 BUNDLED WITH
-   1.14.6
+   1.15.4
