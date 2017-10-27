@@ -1,8 +1,6 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  geocoded_by :ip_address,
-  latitude :lat, longitude :lon
   after_validation :geocode
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
