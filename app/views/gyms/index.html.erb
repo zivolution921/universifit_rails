@@ -25,7 +25,7 @@
             });
             var service = new google.maps.places.PlacesService(map);
               service.nearbySearch({
-                location: rak,
+                location: pos,
                 radius: 5500,
                 type: ['gym']
               }, callback);
