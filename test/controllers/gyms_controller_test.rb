@@ -6,7 +6,7 @@ class GymsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get index" do
-    get gym_url
+    get gyms_url
     assert_response :success
   end
 
@@ -17,7 +17,7 @@ class GymsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create gym" do
     assert_difference('Gym.count') do
-      post gym_url, params: { gym: { address: @gym.address, latitude: @gym.latitude, longitude: @gym.longitude } }
+      post gyms_url, params: { gym: { latitude: @gym.latitude, longitude: @gym.longitude } }
     end
 
     assert_redirected_to gym_url(Gym.last)
@@ -34,7 +34,7 @@ class GymsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update gym" do
-    patch gym_url(@gym), params: { gym: { address: @gym.address, latitude: @gym.latitude, longitude: @gym.longitude } }
+    patch gym_url(@gym), params: { gym: { latitude: @gym.latitude, longitude: @gym.longitude } }
     assert_redirected_to gym_url(@gym)
   end
 
@@ -43,6 +43,6 @@ class GymsControllerTest < ActionDispatch::IntegrationTest
       delete gym_url(@gym)
     end
 
-    assert_redirected_to gym_url
+    assert_redirected_to gyms_url
   end
 end

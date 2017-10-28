@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p> Curren location is: <%= request.location.address %> </p> 
+<p>
+  <strong>Latitude:</strong>
+  <%= @gym.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @gym.longitude %>
+</p>
+
+<%= link_to 'Edit', edit_gym_path(@gym) %> |
+<%= link_to 'Back', gyms_path %>
