@@ -1,2 +1,0 @@
-class Gym < ApplicationRecord
-end
