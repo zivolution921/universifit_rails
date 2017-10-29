@@ -19,13 +19,16 @@
           center: pos,
           zoom: 15
         });
-        infowindow = new google.maps.InfoWindow();
         if (navigator.geolocation) {
+          
           navigator.geolocation.getCurrentPosition(function (position) {
+             sleep(10);
              pos = {
+              
               lat: position.coords.latitude,
               lng: position.coords.longitude
               };
+              sleep(5);
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
             map.setCenter(pos);
