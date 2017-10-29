@@ -4,7 +4,6 @@
       // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
       var map;
-      var infowindow;
       var pos;
 
       function initMap() {
@@ -14,7 +13,7 @@
           center: pyrmont,
           zoom: 15
         });
-         infoWindow = new google.maps.InfoWindow({ map: map });
+         var infoWindow = new google.maps.InfoWindow({ map: map });
       if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
             
@@ -50,12 +49,14 @@
           position: place.geometry.location
         });
 
-        google.maps.event.addListener(marker, 'click', function() {
-          infowindow.setContent(place.name);
-          infowindow.open(map, this);
+        google.maps.event.addListener(marker, 'click', function(event) {
+          infoWindow.setPosition(event.latLng);
+          infoWindow.setContent(place.name);
+          infoWindow.open(map,marker);
+          
         });
       }
-          infoWindow.open(map);
+          //infoWindow.open(map);
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
           });
