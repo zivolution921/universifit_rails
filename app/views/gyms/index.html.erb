@@ -19,6 +19,7 @@
           center: pos,
           zoom: 15
         });
+        infowindow = new google.maps.InfoWindow();
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function (position) {
              pos = {
@@ -30,8 +31,6 @@
             map.setCenter(pos);
   });
 }
-
-        infowindow = new google.maps.InfoWindow();
         var service = new google.maps.places.PlacesService(map);
         service.nearbySearch({
           location: pos,
