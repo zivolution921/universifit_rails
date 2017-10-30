@@ -22,12 +22,7 @@
             
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-         var service = new google.maps.places.PlacesService(map);
+            var service = new google.maps.places.PlacesService(map);
         service.nearbySearch({
           location: pos,
           radius: 5000,
@@ -57,6 +52,12 @@
 
       }
 
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+         
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);
         infoWindow.setContent(browserHasGeolocation ?
