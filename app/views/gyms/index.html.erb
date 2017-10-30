@@ -43,14 +43,11 @@
           map: map,
           position: place.geometry.location
         });
-
+}
         google.maps.event.addListener(marker, 'click', function() {
           infoWindow.setContent(place.name);
           infoWindow.open(map, this);
         });
-
-      }
-    }
 
           });
         } else {
@@ -65,6 +62,7 @@
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
       }
+    }
 </script>
     <div class = "container" >
   <div id="map" style="width: 800px; height: 800px"></div>
