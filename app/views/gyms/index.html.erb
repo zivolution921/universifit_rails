@@ -4,14 +4,9 @@
       var pos;
 
       function initMap() {
-        var pos = {lat: -30, lng: 70}
-        var pyrmont = {lat: -31.5546, lng: 74.3572};
-
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: pyrmont,
-          zoom: 15
-        });
-
+         pos = {lat: 31.5546, lng: 74.3572}
+        //var pyrmont = {lat: -31.5546, lng: 74.3572};
+        
         infowindow = new google.maps.InfoWindow();
          if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
@@ -22,7 +17,7 @@
             infowindow.setPosition(pos);
             infowindow.setContent('Location found.');
             //infowindow.open(map);
-            map.setCenter(pos);
+           // map.setCenter(pos);
             
           }, function() {
             handleLocationError(true, infowindow, map.getCenter());
@@ -31,6 +26,12 @@
           // Browser doesn't support Geolocation
           handleLocationError(false, infowindow, map.getCenter());
         }
+
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: pos,
+          zoom: 15
+        });
+
         var service = new google.maps.places.PlacesService(map);
         service.nearbySearch({
           location: pos,
