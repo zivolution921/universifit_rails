@@ -4,7 +4,7 @@
       var pos;
 
       function initMap() {
-         pos = {lat: 31.5546, lng: 74.3572}
+         pos = {lat: 20.5546, lng: 74.3572}
         //var pyrmont = {lat: -31.5546, lng: 74.3572};
         infowindow = new google.maps.InfoWindow();
          if (navigator.geolocation) {
@@ -35,7 +35,7 @@
         var service = new google.maps.places.PlacesService(map);
         service.nearbySearch({
           location: pos,
-          radius: 500,
+          radius: 500 ,
           type: ['gym']
         }, callback);
       }
