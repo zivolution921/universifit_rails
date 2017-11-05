@@ -26,12 +26,16 @@
           // Browser doesn't support Geolocation
           handleLocationError(false, infowindow, map.getCenter());
         }
-        
+        for(int a = 0; a<2000)
+        {
+        }
         map = new google.maps.Map(document.getElementById('map'), {
           center: pos,
           zoom: 15
         });
-
+        for(int a = 0; a<2000)
+                {
+        }
         var service = new google.maps.places.PlacesService(map);
         service.nearbySearch({
           location: pos,
