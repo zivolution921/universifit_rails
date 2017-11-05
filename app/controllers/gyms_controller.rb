@@ -3,7 +3,7 @@ class GymsController < InheritedResources::Base
 
   def index
     @location_info = request.ip
-    @current_user.ip = location_info
+    @current_user.ip = @location_info
     puts location_info
     @uloc = request.location
   end
