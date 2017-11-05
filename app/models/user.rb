@@ -12,6 +12,7 @@ class User < ApplicationRecord
   has_one :profile
 
   has_many :notifications
+  geocoded_by :ip
 
   def password_changed?
     self.password.present?
