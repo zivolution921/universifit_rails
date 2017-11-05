@@ -1,3 +1,4 @@
+before_action :authenticate_user!
 class GymsController < InheritedResources::Base
   def index
   end
