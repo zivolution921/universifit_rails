@@ -37,6 +37,9 @@
         <li><span class="icon"><span class="i-user fs20"></span></span> <span class="link"><%= link_to 'FRIENDS', friends_path %></span> 
         <button type="button" class="pull-right btn btn-primary" data-toggle="modal" data-target="#friendNotificationModal"><%= friends_notification_count + follows_notification_count %></button></li>
         <%= render 'friends_modal' %></li>
+
+
+        <li><span class="icon"><span class="i-globe fs20"></span></span> <span class="link"><%= link_to 'Gyms', gyms_path %></span> 
       </ul>
     </div>
 

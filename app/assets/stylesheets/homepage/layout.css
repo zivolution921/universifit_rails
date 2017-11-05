@@ -1568,6 +1568,10 @@ div.rdots {
     -o-animation: fadein 6s;
     animation: fadein 6s;
 }
+.my-image
+{
+    margin-top: -40px !important;
+}
 }
 @media only screen and (max-width: 384px) {
 
