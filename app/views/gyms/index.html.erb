@@ -20,7 +20,7 @@
             infowindow.setPosition(pos);
             infowindow.setContent('Location found.');
             //infowindow.open(map);
-           // map.setCenter(pos);
+            map.setCenter(pos);
             var service = new google.maps.places.PlacesService(map);
         service.nearbySearch({
           location: pos,
