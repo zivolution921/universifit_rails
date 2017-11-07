@@ -2,12 +2,11 @@ class GymsController < InheritedResources::Base
   before_action :authenticate_user!
 
   def index
-    @cordinates = Geocoder.coordinates(request.ip)
+    #@cordinates = Geocoder.coordinates(request.ip)
+    @coordinates = Geocoder.coordinates(request.remote_ip)
     puts @coordinates[0]
-    puts @cordinates[1]
     @client = GooglePlaces::Client.new("AIzaSyCEdd9xVqSuVr_LOiq_plb0QZe9laI4jV8")
-    puts request.location.latitude
-    @restaurants = @client.spots(request.location.latitude, request.location.longitude, types: 'gym')
+    @restaurants = @client.spots(@coordinates[0], @coordinates[1], types: 'gym')
   end
 
 end
