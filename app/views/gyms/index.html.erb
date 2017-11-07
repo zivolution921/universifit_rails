@@ -65,10 +65,20 @@
 
     <div class = "container" >
   <div id="map" style="width: 800px; height: 800px"></div>
-  <%= @location_info %>
+  <thead>
+    <tr>
+      <th>GymName</th>
+      <th>Join</th>
+    </tr>
+  </thead>
+  <tbody>
   <% @restaurants.each do |rest| %>
-    <%= rest.name %>
-    <br>
+    <tr>
+      <td><%= rest.name %></td>
+      <td>Join</td>
+    </tr>
   <% end %>
+  </tbody>
+  </table>
 </div>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEdd9xVqSuVr_LOiq_plb0QZe9laI4jV8&libraries=places&callback=initMap" async defer ></script>
