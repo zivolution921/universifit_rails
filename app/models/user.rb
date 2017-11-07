@@ -8,6 +8,8 @@ class User < ApplicationRecord
 
   has_many :follows, foreign_key: 'following_user_id'
   has_many :followings, through: :follows, source: :profile
+  has_many :usergyms
+  has_many :gyms, through: :usergyms
 
   has_one :profile
 
