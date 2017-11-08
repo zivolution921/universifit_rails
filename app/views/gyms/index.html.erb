@@ -65,20 +65,19 @@
 
     <div class = "container" >
   <div id="map" style="width: 800px; height: 800px"></div>
+<table>
   <thead>
     <tr>
       <th>GymName</th>
-      <th>Join</th>
     </tr>
   </thead>
   <tbody>
-  <% @gyms.each do |gym| %>
-    <tr>
-      <td><%= gym.name %></td>
-      <td>Join</td>
-    </tr>
-  <% end %>
+    <% @gyms.each do |gym| %>
+      <tr>
+        <td><%= gym.name %></td>
+      </tr>
+    <% end %>
   </tbody>
-  </table>
+</table>
 </div>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEdd9xVqSuVr_LOiq_plb0QZe9laI4jV8&libraries=places&callback=initMap" async defer ></script>
