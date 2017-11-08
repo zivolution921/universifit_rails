@@ -8,7 +8,7 @@ class GymsController < InheritedResources::Base
     puts request.remote_ip
     puts @coordinates[0]
     @client = GooglePlaces::Client.new("AIzaSyCEdd9xVqSuVr_LOiq_plb0QZe9laI4jV8")
-    @gyms = @client.spots(@coordinates[0], @coordinates[1], types: 'gym')
+    @gyms = @client.spots(@coordinates[0], @coordinates[1], types: 'gym',:radius (3000) )
   end
 
 end
