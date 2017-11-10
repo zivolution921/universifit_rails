@@ -69,12 +69,14 @@
   <thead>
     <tr>
       <th>GymName</th>
+      <th> Address</th>
     </tr>
   </thead>
   <tbody>
     <% @gyms.each do |gym| %>
       <tr>
         <td><%= gym.name %></td>
+        <td> <%= gym.address %></td>
       </tr>
     <% end %>
   </tbody>
