@@ -16,7 +16,7 @@ class GymsController < InheritedResources::Base
   end
   def join_gym
     @user = current_user
-    UserGym.create(params[:gym_id],@user)
+    UserGym.create(gym_id:params[:gym_id],user_id:@user)
     redirect_to root_path
   end
 
