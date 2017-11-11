@@ -79,7 +79,7 @@
       <tr>
         <td><%= gym.name %></td>
         <td><%= link_to "Join Gym", join_gym_gym_path(gym), class: "btn btn-primary" %> </td>
-        <td><%= link_to "Members", gym_members_gym_path(gym), class: "btn btn-primary" %> </td>
+        <td><%= link_to "Members", members_gym_path(gym), class: "btn btn-primary" %> </td>
       </tr>
     <% end %>
   <% end %>
