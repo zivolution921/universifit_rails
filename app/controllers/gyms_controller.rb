@@ -14,7 +14,7 @@ class GymsController < InheritedResources::Base
      end
      lat = @coordinates[0]
      long = @coordinates[1]
-    @lobs = Gym.where(latitude:lat, longitude: long)
+    @lobs = Gym.all
   end
   def join_gym
   
