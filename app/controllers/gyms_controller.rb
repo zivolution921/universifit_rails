@@ -1,5 +1,5 @@
 class GymsController < InheritedResources::Base
-  include V1::Gyms::Creation
+  include Gyms::Creation
   before_action :authenticate_user!
 
   def index
