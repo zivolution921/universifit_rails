@@ -1,4 +1,4 @@
 class UserGym < ApplicationRecord
-  belongs_to :User
-  belongs_to :Gym
+  belongs_to :user
+  belongs_to :gym
 end
