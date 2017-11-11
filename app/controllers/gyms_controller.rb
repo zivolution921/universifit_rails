@@ -17,7 +17,7 @@ class GymsController < InheritedResources::Base
   def join_gym
   end
 
-  def gym_members
+  def members
     @gym = Gym.find(params[:id])
     @members = @gym.users
   end

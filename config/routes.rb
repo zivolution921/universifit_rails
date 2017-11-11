@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :gyms, only: [:index] do
     member do
       post :join_gym
-      post :gym_members
+      post :members
     end
   end
   # resources :registrations
