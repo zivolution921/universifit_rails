@@ -73,11 +73,13 @@
     </tr>
   </thead>
   <tbody>
+  <% if !@gyms.nil? %>
     <% @gyms.each do |gym| %>
       <tr>
         <td><%= gym.name %></td>      
       </tr>
     <% end %>
+  <% end %>
   </tbody>
 </table>
 </div>
