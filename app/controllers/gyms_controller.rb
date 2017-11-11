@@ -15,6 +15,9 @@ class GymsController < InheritedResources::Base
     @lobs = Gym.where(latitude:@coordinates[0], longitude: @coordinates[1])
   end
   def join_gym
+    @user = current_user
+    UserGym.create(params[:gym_id],@user)
+    redirect_to root_path
   end
 
   def members
