@@ -12,12 +12,11 @@ class GymsController < InheritedResources::Base
      gyms.each do |g|
           Gym.create(name:g.name, latitude: @coordinates[0], longitude: @coordinates[1])
      end
-    @lobs = Gym.where(latitude:@coordinates[0], longitude: @coordinates[1])
+    @lobs = Gym.where(latitude: >= @coordinates[0]+0.9, latitude: <= @coordinates[0]-0.9, longitude: >= @coordinates[1]+0.9, longitude: <= @coordinates[1]-0.9)
   end
   def join_gym
     @user = current_user
     UserGym.create(gym_id:params[:gym_id],user_id:@user)
-    redirect_to root_path
   end
 
   def members
