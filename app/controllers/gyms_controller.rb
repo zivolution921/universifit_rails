@@ -10,11 +10,9 @@ class GymsController < InheritedResources::Base
     @client = GooglePlaces::Client.new("AIzaSyCEdd9xVqSuVr_LOiq_plb0QZe9laI4jV8")
     gyms = @client.spots(@coordinates[0], @coordinates[1], types: 'gym', radius: 3000 )
      gyms.each do |g|
-          Gym.create(name:g.name, latitude: coordinates[0], longitude:coordinates[1])
+          Gym.create(name:g.name, latitude: @coordinates[0], longitude: @coordinates[1])
      end
-     lat = @coordinates[0]
-     long = @coordinates[1]
-    @lobs = Gym.all
+    @lobs = Gym.where(latitude:@coordinates[0], longitude: @coordinates[1])
   end
   def join_gym
   
