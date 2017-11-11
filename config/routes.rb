@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   
  
   resources :gyms, only: [:index]
-  resources :gym
   # resources :registrations
   devise_for :admin, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
