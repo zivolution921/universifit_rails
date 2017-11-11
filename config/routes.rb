@@ -3,7 +3,7 @@ Rails.application.routes.draw do
  
   resources :gyms, only: [:index] do
     member do
-      post :join_gym
+      get :join_gym
       get :members
     end
   end
