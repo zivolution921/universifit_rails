@@ -12,7 +12,9 @@ class GymsController < InheritedResources::Base
      gyms.each do |g|
           Gym.create(name:g.name, latitude: coordinates[0], longitude:coordinates[1])
      end
-    @lobs = Gym.where(latitude:@coordinates[0], longitude: @coordinates[1])
+     lat = @coordinates[0]
+     long = @coordinates[1]
+    @lobs = Gym.where(latitude:lat, longitude: long)
   end
   def join_gym
   
