@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   
  
-  resources :gyms, only: [:index]
+  resources :gyms, only: [:index] do
+    member do
+      post :join_gym
+    end
+  end
   # resources :registrations
   devise_for :admin, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
